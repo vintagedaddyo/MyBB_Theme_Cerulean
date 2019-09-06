@@ -1,0 +1,33 @@
+
+Due to the addition of css groupimage replacement, we need to after install modify for font awesome icon and add in groups in groupimage input for example for each usergroup its respective group name:
+
+
+Group Image
+
+Here you can set a group image which will show on each post made by users in this group. 
+
+
+Example
+
+<icon class="fa fa-cog"></icon><i>administrator</i>
+
+
+
+
+
+<icon class="fa fa-gavel"></icon><i>super moderator</i>
+
+
+
+
+
+<icon class="fa fa-gavel"></icon><i>moderator</i>
+
+
+
+
+
+<icon class="fa fa-user"></icon><i>registered</i>
+
+
+Etc, etc....

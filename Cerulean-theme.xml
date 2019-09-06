@@ -1,0 +1,4824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme name="Cerulean" version="1821">
+	<properties>
+		<templateset><![CDATA[8]]></templateset>
+		<editortheme><![CDATA[buttons-dark.css]]></editortheme>
+		<imgdir><![CDATA[themes/cerulean]]></imgdir>
+		<logo><![CDATA[themes/cerulean/logo.png]]></logo>
+		<tablespace><![CDATA[4]]></tablespace>
+		<borderwidth><![CDATA[1]]></borderwidth>
+		<color><![CDATA[]]></color>
+		<disporder><![CDATA[a:11:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:14:"memberlist.css";i:3;s:10:"usercp.css";i:4;s:17:"thread_status.css";i:5;s:16:"star_ratings.css";i:6;s:14:"showthread.css";i:7;s:9:"modcp.css";i:8;s:14:"groupimage.css";i:9;s:14:"grouptitle.css";i:10;s:13:"grouppost.css";i:11;}]]></disporder>
+	</properties>
+	<stylesheets>
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: thread_status.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+
+.thread_status {
+    display: inline-block;
+}
+
+.thread_status.dot_folder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #017DCC;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.dot_folder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.dot_hotfolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FA6A6A;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.dot_hotfolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.dot_hotclosefolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FA6A6A;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.dot_hotclosefolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.dot_closefolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FFD700;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.dot_closefolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.dot_newfolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FFD700;
+    content: "\f023";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.dot_newfolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.dot_newhotfolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FA6A6A;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.dot_newhotfolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.dot_newhotclosefolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FA6A6A;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.dot_newhotclosefolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.dot_newclosefolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FFD700;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.dot_newclosefolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.folder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #C6C6C6;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.folder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.hotfolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FA6A6A;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.hotfolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.hotclosefolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FA6A6A;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.hotclosefolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.closefolder:before {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #333;
+    content: "\f023";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.closefolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.movefolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FFD700;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.movefolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.newfolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #BDE1A0;
+    content: "\f111";
+    position: absolute;
+    z-index: 1; 
+}
+
+.thread_status.newfolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.newhotfolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FA6A6A;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.newhotfolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.newhotclosefolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #FA6A6A;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.newhotclosefolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+.thread_status.newclosefolder:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    color: #AEAEAE;
+    content: "\f111";
+    position: absolute;
+    z-index: 1;
+}
+
+.thread_status.newclosefolder:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #fff;
+    content: "\f15c";
+    position: relative;
+    z-index: 0;
+    background-color: #333;
+    border: #333 1px solid;
+}
+
+		]]>
+		</stylesheet>
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: star_rating.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+.star_rating_container {
+   display:inline-block;
+   vertical-align:middle;
+   margin-right:6px;
+   float:right;
+   margin-top:6px;
+}
+
+.star_rating {
+     unicode-bidi: bidi-override;
+     direction: ltr;
+     list-style:none outside none;
+     margin:0;
+     padding:0;
+}
+
+.star_rating,
+.star_rating li a:hover,
+.star_rating .current_rating {
+  vertical-align: middle;      
+}
+
+td .star_rating {
+  margin-left: 0 auto;
+  width:120px;
+  position:relative;
+  left:-13px;
+}
+
+.star_rating li {
+  margin-left:5px;
+  float:right;
+  unicode-bidi: bidi-override;
+}
+
+.star_rating li a {
+  color:#b9b9b9;
+  text-decoration:none;
+}
+
+.star_rating li a {
+  font-size:0px;
+}
+
+.star_rating li a:before {
+  font-family: FontAwesome;
+  content: "\f005";
+  font-size:14px;
+}
+
+/*Firefox hack*/
+@-moz-document url-prefix() {
+.star_rating li a:before {
+  font-size:18px;
+  position:relative;
+  top:-5px;
+}
+}
+
+.star_rating_notrated li:hover a,
+.star_rating_notrated li:hover ~ li a {
+  color:  #0072BF !important;
+  cursor:pointer;
+}
+
+
+li.current_rating[style*="20"] ~ li a.one_star,
+li.current_rating[style*="40"] ~ li:nth-child(n+5) a,
+li.current_rating[style*="60"] ~ li:nth-child(n+4) a,
+li.current_rating[style*="80"] ~ li:nth-child(n+3) a,
+li[style*="100"]~ li:nth-child(n+2) a  {
+  color:#eab71f;
+}
+
+.star_rating .current_rating {
+  unicode-bidi: bidi-override;
+  direction: ltr;
+  display:none;
+  float:left;
+  text-align:right;
+  position:relative;
+  top:1px;
+  right:3px;
+}
+
+
+.inline_rating {
+  float: left;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.star_rating_success, .success_message {
+  color: #00b200;
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+td[id*="rating_table"] {
+text-align:center;
+margin:0 auto;
+}
+
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: usercp.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+.cp_options td:first-child{
+      width:230px;
+}
+
+.usercp_options{
+      margin:0;
+      padding:0;
+      list-style:none outside none;
+}
+
+.usercp_options>li{
+      margin:0;
+      padding:4px 0px;
+}
+
+.usercp_options>li>span{
+      display:inline-block;
+      text-align:right;
+}
+
+.usercp_nav_item{
+      display:block;
+}
+
+.usercp_nav_item a {
+	color:#0072BC;
+}
+
+.usercp_nav_item:before{
+      font-size:16px;
+      font-family:'FontAwesome';
+      color: #0072BC;
+      width:28px;
+      margin-right:3px;
+      text-align:center;
+      display:inline-block;
+}
+
+.usercp_nav_composepm:before{
+      content:"\f112";
+}
+
+.usercp_nav_pmfolder:before{
+      content:"\f07c";
+}
+
+.usercp_nav_sub_pmfolder:before{
+      content:"\f07b";
+}
+
+.usercp_nav_trash_pmfolder:before{
+      content:"\f014";
+}
+
+.usercp_nav_pmtracking:before{
+      content:"\f024";
+}
+
+.usercp_nav_pmfolders:before{
+      content:"\f07b";
+}
+
+.usercp_nav_profile:before{
+      content:"\f007";
+}
+
+.usercp_nav_email:before{
+      content:"\f0e0";
+}
+
+.usercp_nav_password:before{
+      content:"\f084";
+}
+
+.usercp_nav_username:before{
+      content:"\f111";
+}
+
+.usercp_nav_editsig:before{
+      content:"\f040";
+}
+
+.usercp_nav_avatar:before{
+      content:"\f03e";
+}
+
+.usercp_nav_options:before{
+      content:"\f085";
+}
+
+.usercp_nav_usergroups:before{
+      content:"\f0c0";
+}
+
+.usercp_nav_editlists:before{
+      content:"\f004";
+}
+
+.usercp_nav_attachments:before{
+      content:"\f0c6";
+}
+
+.usercp_nav_drafts:before{
+      content:"\f040";
+}
+
+.usercp_nav_subscriptions:before{
+      content:"\f02e";
+}
+
+.usercp_nav_fsubscriptions:before{
+      content:"\f03a";
+}
+
+.usercp_nav_notepad:before{
+      content:"\f02d";
+}
+
+.usercp_nav_viewprofile:before{
+      content:"\f007";
+}
+
+.usercp_nav_home:before{
+      content:"\f015";
+}
+
+.usercp_nav_status:before{
+      content:"\f118";
+}
+
+.usercp_nav_myalerts:before{
+      content:"\f0f3";
+}
+
+.usercp_nav_myalerts_delete_all:before{
+      content:"\f058";
+}
+
+.usercp_nav_myalerts_delete_read:before{
+      content:"\f05c";
+}
+
+.usercp_nav_award:before{
+      content:"\f091";
+}
+
+.usercp_notepad{
+      width:99%;
+}
+
+#usercpalerts_e td[class^="trow"],#usercppms_e td[class^="trow"],#usercpprofile_e td[class^="trow"],#usercpmisc_e td[class^="trow"]{
+      border:none;
+      padding:0px;
+}
+
+.pagination{
+      padding:3px 0px;
+}
+
+.usercp_notepad{
+      width:99%;
+}
+
+.usercp_container{
+      margin:5px;
+      padding:8px;
+}
+
+td[class^=trow]{
+      border:none;
+}
+
+.x_new_pm:before {
+	font-family:FontAwesome;
+	content: "\f003"; 
+	font-size:16px;
+}
+
+.x_old_pm:before {
+	font-family:FontAwesome; 
+	content: "\f2b7"; 
+	font-size:16px;
+}
+
+.x_fw_pm:before {
+	font-family:FontAwesome; 
+	content: "\f2b7"; 
+	position:absolute; 
+	font-size:16px;
+}
+
+.x_fw_pm:after {
+	font-family:FontAwesome; 
+	content: "\f178"; 
+	position:relative; 
+	top:11px; 
+	left:5px; 
+	color: #0074C2; 
+	font-size:16px;
+}
+
+.x_re_pm:before {
+	font-family:FontAwesome; 
+	content: "\f2b7"; 
+	position:absolute; 
+	font-size:16px;
+}
+
+.x_re_pm:after {
+	font-family:FontAwesome; 
+	content: "\f177"; 
+	position:relative; 
+	top:11px; right:5px; 
+	color: #663096; 
+	font-size:16px;
+}		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: showthread.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+
+ul.thread_tools,ul.thread_tools li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.thread_tools li {
+	padding-left: 0;
+	padding-bottom: 4px;
+	margin-bottom: 3px; 
+	font-size: 11px;
+}
+
+ul.thread_tools li.printable:before {
+    font-family: FontAwesome;
+    font-size: 10px;
+    position: absolute; 
+    z-index: 1;
+    margin-left: -20px;
+}
+
+ul.thread_tools li.printable:after{
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #007FC6;
+    content: "\f02f";
+	float: left;
+	position: relative; 
+    z-index: 0; 
+	padding-right: 5px;
+}
+
+ul.thread_tools li.sendthread:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    position: absolute; 
+    z-index: 1;
+    margin-left: -20px;
+}
+
+ul.thread_tools li.sendthread:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #007FC6;
+    content: "\f0e0";
+	position: relative;
+    z-index: 0;
+	float: left;
+	padding-right: 5px;
+}
+
+ul.thread_tools li.subscription_add:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    position: absolute; 
+    z-index: 1;
+    margin-left: -20px;
+}
+
+ul.thread_tools li.subscription_add:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #007FC6;
+    content: "\f067";
+	position: relative;
+    z-index: 0;
+	float: left;
+	padding-right: 5px;
+}
+
+ul.thread_tools li.subscription_remove:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    position: absolute; 
+    z-index: 1;
+    margin-left: -20px;
+}
+
+ul.thread_tools li.subscription_remove:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #007FC6;
+    content: "\f068";
+	position: relative;
+    z-index: 0;
+	float: left;
+	padding-right: 5px;
+}
+
+ul.thread_tools li.poll:before {
+    font-family: FontAwesome;
+    font-size: 8px;
+    position: absolute; 
+    z-index: 1;
+    margin-left: -20px;
+}
+
+ul.thread_tools li.poll:after {
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #007FC6;
+    content: "\f080";
+	position: relative;
+    z-index: 0;
+	float: left;
+	padding-right: 5px;
+}
+
+.showthread_spinner {
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+}		
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: modcp.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+.modcp_nav_item:before{
+      font-size:16px;
+      font-family:'FontAwesome';
+      color: #0072BC;
+      width:28px;
+      margin-right:3px;
+      text-align:center;
+      display:inline-block;
+}
+
+.modcp_nav_home:before{
+      content:"\f015";
+}
+
+.modcp_nav_announcements:before {
+    content:"\f0f3"
+}
+
+.modcp_nav_reports:before {
+    content: "\f071";
+}
+
+.modcp_nav_modqueue:before {
+    content:"\f02d"
+}
+
+.modcp_nav_modlogs:before {
+    content: "\f109";
+}
+
+.modcp_nav_editprofile:before {
+    content: "\f007";
+}
+
+.modcp_nav_banning:before {
+    content: "\f023";
+}
+
+.modcp_nav_warninglogs:before {
+    content: "\f06e";
+}
+
+.modcp_nav_ipsearch:before {
+    content: "\f002";
+}
+
+.modqueue_message {
+    overflow: auto;
+    max-height: 250px;
+}
+
+.modqueue_controls {
+    width: 270px;
+    float: left;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 6px;
+    font-weight: bold;
+}
+
+.modqueue_controls label {
+    margin-left: 8px;
+}
+
+.label_radio_ignore, .label_radio_delete, .label_radio_approve {
+    font-weight: bold;
+}
+
+.modqueue_meta {
+    color: #444;
+    font-size: 95%;
+    margin-bottom: 8px;
+}
+
+.modqueue_mass {
+    list-style: none;
+    margin: 0;
+    width: 150px;
+    padding: 0;
+}
+
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="groupimage.css" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: groupimage.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+/* general styling of all team group */
+
+div[class^=team_usergroup_] {
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+    border: solid 1px #AAA;
+    color: #767676;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+div[class^=team_usergroup_] i {
+    font-style: normal;
+}
+
+
+/* default */
+
+
+/* individual styling of team group for user group 4 Administrator */
+
+div.team_usergroup_4 {
+    color: #008000;
+    border-color: #008000;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+div.team_usergroup_4 icon {
+    color: #008000;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 3 Super Moderator */
+
+div.team_usergroup_3 {
+    color: #CC00CC;
+    border-color: #CC00CC;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_3 icon {
+    color: #CC00CC;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 6 Moderator */
+
+div.team_usergroup_6 {
+    color: #CC00CC;
+    border-color: #CC00CC;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_6 icon {
+    color: #CC00CC;
+    padding-right: 5px;
+}  
+
+
+/* individual styling of team group for user group 2 Registered */
+
+div.team_usergroup_2 {
+    color: #0072BF;
+    border-color: #0072BF;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_2 icon {
+    color: #0072BF;
+    padding-right: 5px;
+}    
+
+
+/* individual styling of team group for user group 1 Guest */
+
+div.team_usergroup_1 {
+    background: none;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_1 icon {
+    color: #555;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 7 Banned */
+
+div.team_usergroup_7 {
+    background: none;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_7 icon {
+    color: #555;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 5 Awaiting Activation */
+
+div.team_usergroup_5 {
+    background: none;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_5 icon {
+    color: #555;
+    padding-right: 5px;
+}
+
+
+/* Additional groups */
+
+
+/* individual styling of team group for user group 8 Management */
+
+div.team_usergroup_8 {
+    color: #008a00;
+    border-color: #008a00;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_8 icon {
+    color: #008a00;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 9 Development */
+
+div.team_usergroup_9 {
+    color: #d23b67;
+    border-color: #d23b67;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_9 icon {
+    color: #d23b67;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 10 Design */
+
+div.team_usergroup_10 {
+    color: #657d08;
+    border-color: #657d08;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_10 icon {
+    color: #657d08;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 11 Security */
+
+div.team_usergroup_11 {
+    color: #927878;
+    border-color: #927878;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_11 icon {
+    color: #927878;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 12 DevOps */
+
+div.team_usergroup_12 {
+    color: #8967de;
+    border-color: #8967de;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_12 icon {
+    color: #8967de;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 13 Support */
+
+div.team_usergroup_13 {
+    color: #f35858;
+    border-color: #f35858;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_13 icon {
+    color: #f35858;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 14 Community */
+
+div.team_usergroup_14 {
+    color: #2bb7c7;
+    border-color: #2bb7c7;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_14 icon {
+    color: #2bb7c7;
+    padding-right: 5px;
+}
+
+
+/* individual styling of team group for user group 15 Web */
+
+div.team_usergroup_15 {
+    color: #2ba4eb;
+    border-color: #2ba4eb;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_15 icon {
+    color: #2ba4eb;
+    padding-right: 5px;
+}
+
+/* individual styling of team group for user group 16 Editorial */
+
+div.team_usergroup_16 {
+    color: #62c9a1;
+    border-color: #62c9a1;
+    vertical-align: middle;
+    padding-top: 2px;
+    font-weight: 600;
+}
+
+div.team_usergroup_16 icon {
+    color: #62c9a1;
+    padding-right: 5px;
+}
+		]]>
+		</stylesheet>
+		<stylesheet name="memberlist.css" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: memberlist.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+.memberlistprofile {
+	display: inline-table;
+	box-sizing: border-box;
+	width: 15rem;
+	margin: 0.3rem;
+	border: 1px solid #282828;
+	text-align: center;
+	color: #444;
+    border-radius: .5rem;
+	height: 6rem;
+	background: #252525;
+	padding-top: 10px;
+	width: 23%;
+}
+
+.memberlistprofile:hover {
+	background: #303030;
+	color: #FFF;
+}
+
+.memberlistname {
+    font-family: source-sans-pro, sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: -15px;
+	cursor: pointer;
+}
+
+.memberlistbio {
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	font-family: Georgia, serif;
+	color: #A0A0A0;
+	margin-top: -10px;
+}
+
+.memberlistbio:hover {
+	color: #FFF;
+}
+
+.usertitle {
+	padding-top: 10px;
+}
+
+.userstar {
+	padding-top: 3px; 
+}
+
+.memberlist_avatar {
+	height: 115px;
+	width: 115px;
+	overflow: hidden;
+	padding: 4px;
+	background-color: #202020;
+	border: 3px solid #ACACAC;
+	margin-top: -15px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+.memberlist_avatar img {
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.1), 0 2px 10px 0 rgba(0,0,0,0.1);
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	margin-top: -8px;
+	margin-left: -8px;
+}
+
+h4 {
+	font-family: source-sans-pro, sans-serif;
+	color: #6EE6E8;
+	font-weight: 100;
+	font: 2rem/4.5rem "Kite One";
+	padding: 0 1.5rem;
+	opacity: .5;
+}
+
+.infothead {
+	background-color: #202020;
+	color: #fff;
+	padding: 6px;
+	font-size: 12px;	
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+.infothead-date {
+	padding: 6px;
+	background-color: #202020;
+	border: 1px solid #303030;
+	color: #ACACAC;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+.infothead-date:hover {
+	padding: 6px;
+	background-color: #303030;
+	border: 1px solid #202020;
+	color: #ACACAC;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+ @media only screen and (max-width:728px) {
+.memberlistprofile {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+}
+
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="grouptitle.css" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: grouptitle.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+/** Gid CSS FA Usertitle Postbit & Profile **/
+
+.grouptag {
+   display: inline-block;
+   padding: 3px 5px;
+   border-radius: 3px;
+   font-family: "FontAwesome";
+   font-weight: 600;
+}
+
+.grouptag_4:before {
+   content: "\f013";
+}
+
+.grouptag_6:before {
+   content: "\f0e3";
+}
+
+.grouptag_3:before {
+   content: "\f0e3";
+}
+
+.grouptag_2:before {
+   content: "\f007";
+}
+
+.grouptag_4 {
+   border: 1px solid #008000;
+   background: #008000;
+   color: #ffffff;
+}
+
+.grouptag_6 {
+   background: #CC00CC;
+   border: 1px solid #CC00CC;
+   color: #ffffff;
+}
+
+.grouptag_3 {
+   background: #CC00CC;
+   border: 1px solid #CC00CC;
+   color: #ffffff;
+}
+
+.grouptag_2 {
+   background: #0072BF;
+   border: 1px solid #0072BF;
+   color: #ffffff;
+}
+
+		]]>
+		</stylesheet>
+		<stylesheet name="css3.css" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: css3.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+tr td.trow1:first-child,
+tr td.trow2:first-child,
+tr td.trow_shaded:first-child {
+	border-left: 0;
+}
+
+tr td.trow1:last-child,
+tr td.trow2:last-child,
+tr td.trow_shaded:last-child {
+	border-right: 0;
+}
+
+.tborder {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.tborder tbody tr:last-child > td {
+	border-bottom: 0;
+}
+
+.tborder tbody tr:last-child > td:first-child {
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.tborder tbody tr:last-child > td:last-child {
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.thead {
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.thead_collapsed {
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.thead_left {
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.thead_right {
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.tcat_menu {
+	-moz-border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+  	border-radius: 0 !important;
+}
+
+.tborder tbody:nth-last-child(2) .tcat_collapse_collapsed {
+	-moz-border-radius-bottomleft: 3px !important;
+	-moz-border-radius-bottomright: 3px !important;
+	-webkit-border-bottom-left-radius: 3px !important;
+	-webkit-border-bottom-right-radius: 3px !important;
+	border-bottom-left-radius: 3px !important;
+	border-bottom-right-radius: 3px !important;
+}
+
+button,
+input.button,
+input.textbox,
+input.invalid_field,
+input.valid_field,
+select,
+textarea,
+.editor_control_bar,
+blockquote,
+.codeblock,
+fieldset,
+.pm_alert,
+.red_alert,
+.popup_menu,
+.postbit_buttons > a,
+a.button {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.post.classic .post_author {
+	-moz-border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+
+.popup_menu .popup_item_container:first-child .popup_item {
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.popup_menu .popup_item_container:last-child .popup_item {
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 6px;
+}
+
+.pagination a {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.pollbar {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.error {
+	-moz-border-radius: 3px;
+    	-webkit-border-radius: 3px;
+   	 border-radius: 3px;
+}
+
+		]]>
+		</stylesheet>
+		<stylesheet name="global.css" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: global.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+/** Current Dev Start **/
+
+fieldset#search {
+    background-color: transparent;	
+}
+
+.select2-dropdown-open .select2-choice {
+    border-bottom-color: transparent !important;
+    -webkit-box-shadow: 0 1px 0 #303030 inset !important;
+    box-shadow: 0 1px 0 #303030 inset !important;
+    background-color: #202020 !important;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #303030), color-stop(0.5, #202020)) !important;
+    background-image: -webkit-linear-gradient(center bottom, #303030 0%, #202020 50%) !important;
+    background-image: -moz-linear-gradient(center bottom, #303030 0%, #202020 50%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#202020', endColorstr='#303030', GradientType=0) !important;
+    background-image: linear-gradient(to top, #303030 0%, #202020 50%) !important;
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+    border: 1px solid #5897fb !important;
+    border-top-color: transparent !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #303030), color-stop(0.5, #202020)) !important;
+    background-image: -webkit-linear-gradient(center top, #303030 0%, #202020 50%) !important;
+    background-image: -moz-linear-gradient(center top, #303030 0%, #202020 50%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#202020', endColorstr='#303030', GradientType=0) !important;
+    background-image: linear-gradient(to bottom, #303030 0%, #202020 50%) !important;
+}
+
+.select2-container .select2-choice {
+    border: 1px solid #252525 !important;
+}
+
+.select2-search input {
+	color: #A0A0A0 !important;
+    border: 1px solid #252525 !important;
+    border-radius: 0;
+    background: #202020 url('themes/cerulean/select3.png') no-repeat 100% -22px !important;
+    background: url('themes/cerulean/select3.png') no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #202020), color-stop(0.99, #252525)) !important;
+    background: url('themes/cerulean/select3.png') no-repeat 100% -22px, -webkit-linear-gradient(center bottom, #202020 85%, #252525 99%) !important;
+    background: url('themes/cerulean/select3.png') no-repeat 100% -22px, -moz-linear-gradient(center bottom, #202020 85%, #252525 99%) !important;
+    background: url('themes/cerulean/select3.png') no-repeat 100% -22px, linear-gradient(to bottom, #202020 85%, #252525 99%) 0 0 !important;
+}
+
+.select2-drop.select2-drop-above {
+    border-top: 1px solid #202020 !important;
+}
+
+.select2-drop {
+	background: #303030 !important;
+    color: #A0A0A0 !important;
+}
+.select2-drop2 {
+	background: #303030 !important;
+}
+.select2-drop-mask2 {
+	background: #303030 !important;
+}
+.select2-drop-mask {
+	background: #303030 !important;
+}
+.select2-no-results {
+ 	background: #303030 !important;
+	color: #A0A0A0 !important; 
+}
+ 
+.select2-container .select2-choice {
+	background: #303030 !important;
+	color: #A0A0A0 !important;
+}
+
+.select2-container-multi .select2-choices {
+    border: 1px solid #252525 !important;
+    background-color: #303030 !important;
+	color: #A0A0A0 !important;	
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #202020), color-stop(15%, #303030)) !important;
+    background-image: -webkit-linear-gradient(top, #202020 1%, #303030 15%) !important;
+    background-image: -moz-linear-gradient(top, #202020 1%, #303030 15%) !important;
+    background-image: linear-gradient(to bottom, #202020 1%, #303030 15%) !important;	
+}
+.select2-drop-active {
+    border: 1px solid #202020 !important;	
+}
+
+/** Current Dev End **/
+
+body {
+	color: #a0a0a0;
+	background: #181818;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+	text-align: center; /* IE 5 fix */
+	line-height: 1.4;
+	overflow-y: scroll;
+}
+a:link {
+	color: #ddd;
+	text-decoration: none;
+}
+a:visited {
+	color: #ddd;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #fff;
+	text-decoration: underline;
+}
+#container {
+	width: 95%;
+	background: #181818;
+	border: 1px solid #181818;
+	color: #a0a0a0;
+	margin: auto auto;
+	padding: 20px;
+	text-align: left; /* IE 5 fix */
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+}
+#logo {
+	background: #181818;
+	padding: 10px 0;
+}
+#content {
+	width: auto !important;
+	color: #a0a0a0;
+}
+#header ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#header ul.menu li {
+	display: inline;
+	margin: 0 5px;
+}
+#header ul.menu li a {
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+#logo ul.top_links {
+	font-weight: bold;
+	text-align: right;
+	margin: -10px 5px 0 0;
+}
+#logo ul.top_links a.search {
+}
+#logo ul.top_links a.memberlist {
+}
+#logo ul.top_links a.calendar {
+}
+#logo ul.top_links a.help {
+}
+#logo ul.top_links a.portal {
+}
+#panel .upper a.logout {
+	font-weight: bold;
+	padding-right: 10px;
+	margin-left: 5px;
+}
+#panel .upper a.login, #panel .upper a.lost_password {
+	padding-left: 10px;
+	margin-left: 5px;
+	font-weight: bold;
+}
+#panel .upper a.register {
+	padding-right: 10px;
+	margin-left: 5px;
+	font-weight: bold;
+}
+#panel .lower ul.panel_links {
+	float: left;
+}
+#panel .lower ul.panel_links a.usercp {
+}
+#panel .lower ul.panel_links a.modcp {
+}
+#panel .lower ul.panel_links a.admincp {
+}
+#panel .lower ul.panel_links a.admincp i:before {
+	content: "\f013";
+}
+#panel .lower ul.user_links {
+	float: right;
+}
+#panel .lower ul.user_links li a {
+	padding: 0;
+	background-image: none;
+}
+#panel .upper {
+	background: #202020;
+	color: #FFF;
+	border-top: 2px solid #007FC6;
+	padding: 7px;
+	clear: both;
+}
+#panel .upper a:link, #panel .upper a:visited, #panel .upper a:hover, #panel .upper a:active {
+	color: #FFF;
+}
+#panel .lower {
+	background: #202020;
+	color: #FFF;
+	border-bottom: 1px solid #303030;
+	padding: 5px;
+}
+#panel .lower a:link, #panel .lower a:visited, #panel .lower a:hover, #panel .lower a:active {
+	color: #FFF;
+}
+.search_icon {
+	background: none;
+	cursor: pointer;
+	margin-left: -24px;
+	padding: 0;
+	border: 0;
+	display: inline-block;
+	color: #747474;
+}
+#search {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	float: right;
+	display: block;
+	margin-bottom: 8px
+}
+#search input.textbox {
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+}
+#search input.button {
+	background: #007FC6 url('themes/cerulean/thead_bg.png') top left repeat-x;
+	color: #FFF;
+}
+#search input {
+	margin: -3px 0;
+}
+#quick_login .remember_me input {
+	vertical-align: middle;
+	margin: -3px 0 0 5px;
+}
+#footer {
+	padding-top: 15px;
+	clear: both;
+}
+#footer ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#footer ul.menu li {
+	margin: 0 5px;
+	display: inline;
+}
+#footer .upper {
+	font-size: 12px;
+	overflow: hidden;
+	background: #202020;
+	border-top: 1px solid #303030;
+	border-bottom: 2px solid #007FC6;
+	color: #FFF;
+	padding: 10px;
+}
+#footer a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+#footer a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+#footer a:hover, a:active {
+	color: #007FC6;
+	text-decoration: underline;
+}
+#footer .upper .language {
+	float: right;
+	margin: -1px;
+	margin-left: 15px;
+}
+#footer .upper .language select {
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+}
+#footer .upper .theme {
+	float: right;
+	margin: -1px;
+	margin-left: 15px;
+}
+#footer .upper .theme select {
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+}
+#footer .upper ul.bottom_links {
+	float: left;
+	margin: 4px 0 0 0;
+}
+#footer .lower {
+	color: #666;
+	padding: 6px 6px 12px 6px;
+	overflow: hidden;
+	font-size: 11px;
+}
+#footer .lower a:link, #footer .lower a:visited {
+	color: #FFF;
+}
+#footer .lower a:hover {
+	color: #007FC6;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#footer .lower a:active {
+	color: #001E38;
+	text-decoration: underline;
+}
+#footer .lower #current_time {
+	float: right;
+	color: #888;
+}
+#debug {
+	float: right;
+	text-align: right;
+	margin-top: 20px;
+	font-size: 11px;
+}
+.scaleimages img {
+	max-width: 100%;
+}
+i.toplinks-portal {
+	padding-right: 2px;
+	padding-left: 2px;
+	color: #007FC6;
+}
+i.toplinks-search {
+	padding-right: 2px;
+	padding-left: 2px;
+	color: #007FC6;
+}
+i.toplinks-memberlist {
+	padding-right: 2px;
+	padding-left: 2px;
+	color: #007FC6;
+}
+i.toplinks-calendar {
+	padding-right: 3px;
+	padding-left: 2px;
+	color: #007FC6;
+}
+i.toplinks-help {
+	padding-right: 2px;
+	padding-left: 2px;
+	color: #007FC6;
+}
+i.panel-register {
+	padding-right: 5px;
+	color: #98C78B;
+	font-size: 14px;
+}
+i.panel-login {
+	padding-right: 5px;
+	color: #C49A38;
+	font-size: 14px;
+}
+i.panel-logout {
+	padding-right: 5px;
+	color: #98C78B;
+	font-size: 14px;
+}
+i.panel-usercp {
+	padding-right: 2px;
+	padding-left: 10px;
+	color: #0072BC;
+	font-size: 14px;
+}
+i.panel-modcp {
+	padding-right: 2px;
+	padding-left: 10px;
+	color: #0072BC;
+	font-size: 14px;
+}
+i.panel-admincp {
+	padding-right: 2px;
+	padding-left: 10px;
+	color: #0072BC;
+	font-size: 14px;
+}
+.forum_status {
+	height: 50px;
+	width: 50px;
+	font-size: 30px;
+	text-align: center;
+}
+.forum_status i {
+	display: inline-block;
+	line-height: 50px;
+}
+.forum_on {
+	color: #007FC6;
+}
+.forum_off, .forum_offlock, .forum_offclose, .forum_offlink {
+	color: #a0a0a0;
+}
+.forum_off i {
+	opacity: .4;
+}
+.forum_offclose i:before {
+	content: "\f023";
+}
+.forum_offlock i:before {
+	content: "\f023";
+}
+.forum_offlink i:before {
+	content: "\f0c1";
+}
+.ficons_2 i:before {
+	content: "\f086";
+}
+.ficons_3 i:before {
+	content: "\f086";
+}
+.ficons_4 i:before {
+	content: "\f086";
+}
+.ficons_6 i:before {
+	content: "\f086";
+}
+.ficons_7 i:before {
+	content: "\f086";
+}
+.subforumicon {
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	margin: 0 5px;
+}
+.subforum_minion {
+	color: #a0a0a0;
+}
+.subforum_minioff, .subforum_miniofflock, .subforum_minioffclose, .subforum_miniofflink {
+	color: #a0a0a0;
+}
+.subforum_minioff {
+	opacity: .4;
+}
+.subforum_minioffclose i:before {
+	content: "\f023";
+}
+.subforum_miniofflock i:before {
+	content: "\f023";
+}
+.subforum_miniofflink i:before {
+	content: "\f0c1";
+}
+table {
+	color: #a0a0a0;
+	font-size: 13px;
+}
+.tborder {
+	background: #282828;
+	width: 100%;
+	margin: auto auto;
+	border: 1px solid #282828;
+}
+.tfixed {
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+.thead {
+	background: #0065A8 url('themes/cerulean/thead_bg.png') top left repeat-x;
+	color: #FFF;
+	padding: 8px;
+}
+.thead a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+.thead a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+.thead a:hover, .thead a:active {
+	color: #000;
+	text-decoration: underline;
+}
+.tcat {
+	background: #202020;
+	color: #FFF;
+	padding: 6px;
+	font-size: 12px;
+}
+.tcat a:link {
+	color: #FFF;
+}
+.tcat a:visited {
+	color: #FFF;
+}
+.tcat a:hover, .tcat a:active {
+	color: #FFF;
+}
+.trow1 {
+	background: #252525;
+	color: #A0A0A0;
+}
+.trow1 a:link {
+	color: #FFF;
+}
+.trow1 a:visited {
+	color: #FFF;
+}
+.trow1 a:hover, .trow1 a:active {
+	color: #007FC6;
+}
+.trow1:hover {
+	background: #303030;
+	color: #FFF;
+}
+.trow2 {
+	background: #252525;
+	color: #A0A0A0;
+}
+.trow2 a:link {
+	color: #FFF;
+}
+.trow2 a:visited {
+	color: #FFF;
+}
+.trow2 a:hover, .trow2 a:active {
+	color: #007FC6;
+}
+.trow2:hover {
+	background: #303030;
+	color: #fff;
+}
+.trow_shaded {
+	background: #ffdde0;
+}
+.no_bottom_border {
+	border-bottom: 0;
+}
+.post.unapproved_post {
+	background: #ffdde0;
+}
+.post.unapproved_post .post_author {
+	border-bottom-color: #ffb8be;
+}
+.post.classic.unapproved_post .post_author {
+	border-color: #ffb8be;
+}
+.post.unapproved_post .post_controls {
+	border-top-color: #ffb8be;
+}
+.trow_deleted, .post.deleted_post {
+	background: #E8DEFF;
+}
+.trow_selected, tr.trow_selected td {
+	background: #FFFBD9;
+}
+.trow_selected a:link, .trow_selected a:visited, .trow_selected a:hover, .trow_selected a:active {
+	color: #a0a0a0;
+}
+.trow_sep {
+	background: #303030;
+	color: #FFF;
+	padding: 6px;
+	font-size: 12px;
+	font-weight: bold;
+}
+.tfoot {
+	background: #0065A8 url('themes/cerulean/thead_bg.png') top left repeat-x;
+	color: #FFF;
+}
+.tfoot a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+.tfoot a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+.tfoot a:hover, .tfoot a:active {
+	color: #000;
+	text-decoration: underline;
+}
+.tfoot ul {
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+.tfoot li {
+	display: inline;
+	list-style: none;
+	padding: 3px;
+}
+i.tfoot-logout {
+	padding-right: 2px;
+	padding-left: 2px;
+	color: #FFF;
+}
+i.tfoot-mark {
+	padding-right: 2px;
+	padding-left: 2px;
+	color: #FFF;
+}
+i.tfoot-team {
+	padding-right: 2px;
+	padding-left: 2px;
+	color: #FFF;
+}
+i.tfoot-stats {
+	padding-right: 2px;
+	padding-left: 2px;
+	color: #FFF;
+}
+.thead input.textbox, .thead select {
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+}
+.bottommenu {
+	background: #202020;
+	color: #A0A0A0;
+	border: 1px solid #4874a3;
+	padding: 10px;
+}
+.navigation {
+	font-size: 12px;
+	color: #A0A0A0;
+}
+.navigation a:link {
+	text-decoration: none;
+}
+.navigation a:visited {
+	text-decoration: none;
+}
+.navigation a:hover, .navigation a:active {
+	text-decoration: underline;
+}
+.navigation .active {
+	color: #A0A0A0;
+	font-size: small;
+	font-weight: bold;
+}
+.smalltext {
+	font-size: 11px;
+}
+.largetext {
+	font-size: 16px;
+	font-weight: bold;
+}
+fieldset {
+	padding: 12px;
+	border: 1px solid #303030;
+	background: #202020;
+	margin: 0;
+}
+fieldset.trow1, fieldset.trow2 {
+    border: 1px solid #303030;
+}
+fieldset.trow1:hover {
+    border: 1px solid #202020;
+	background: #303030;
+}
+fieldset.trow2:hover {
+    border: 1px solid #202020;
+	background: #303030;
+}
+fieldset.align_right {
+	text-align: right;
+}
+input.textbox {
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+	padding: 2px;
+	outline: 0;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+textarea {
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+	padding: 2px;
+	line-height: 1.4;
+	outline: 0;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+}
+
+
+
+
+
+/*
+select {
+	background: #202020 url('themes/cerulean/select_arrow_down.png')  no-repeat right;
+	padding: 3px;
+	border: 1px solid #303030;
+	width: 220px;
+	outline: 0;
+	color: #a0a0a0;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+	-webkit-appearance: none;
+}
+*/
+/*
+
+select {
+	padding: 3px;
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+	outline: 0;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+}
+
+*/
+button, input.button {
+	padding: 3px 8px;
+	cursor: pointer;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+	background: #353535;
+	border: 1px solid #252525;
+	color: #a0a0a0;
+	outline: 0;
+}
+button:hover, input.button:hover {
+	border-color: #353535;
+	background: #252525;
+	color: #FFF;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+form input.error {
+	border: 1px solid #f30;
+	color: #f30;
+	background: #ffffff;
+	padding: 3px;
+	outline: 0;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+form input.valid {
+	border: 1px solid #0c0;
+	background: #ffffff;
+	padding: 3px;
+	outline: 0;
+	font-size: 13px;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+}
+form label.error {
+	color: #f30;
+	margin: 5px;
+	padding: 0px;
+	display: block;
+	font-weight: bold;
+	font-size: 11px;
+}
+form #message {
+	width: 500px;
+}
+.editor {
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+}
+.editor_control_bar {
+	background: #202020;
+	border: 1px solid #303030;
+}
+.post .editor_control_bar {
+	background: #f5f5f5;
+}
+.popup_menu {
+	background: #202020;
+	border: 1px solid #303030;
+}
+.popup_menu .popup_item {
+	background: #202020;
+	color: #a0a0a0;
+}
+.popup_menu .popup_item:hover {
+	background: #303030;
+	color: #a0a0a0;
+}
+.trow_reputation_positive {
+	background: #ccffcc;
+}
+.trow_reputation_negative {
+	background: #ffcccc;
+}
+.reputation_positive {
+	color: green;
+}
+.reputation_neutral {
+	color: #eee;
+}
+.reputation_negative {
+	color: red;
+}
+.repbox {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px 7px 5px 7px;
+}
+._neutral {
+	background-color: #FAFAFA;
+	color: #999999;
+	border: 1px solid #CCCCCC;
+}
+._minus {
+	background-color: #FDD2D1;
+	color: #CB0200;
+	border: 1px solid #980201;
+}
+._plus {
+	background-color: #E8FCDC;
+	color: #008800;
+	border: 1px solid #008800;
+}
+img {
+	border: none;
+}
+img.attachment {
+	border: 1px solid #E9E5D7;
+	padding: 2px;
+}
+hr {
+	background-color: #000000;
+	color: #000000;
+	height: 1px;
+	border: 0px;
+}
+.clear {
+	clear: both;
+}
+.float_left {
+	float: left;
+}
+.float_right {
+	float: right;
+}
+.hidden {
+	display: none;
+	float: none;
+	width: 1%;
+}
+.hiddenrow {
+	display: none;
+}
+.selectall {
+	background: #FFFBD9;
+	color: #333;
+	text-align: center;
+}
+.expcolimage {
+	float: right;
+	width: auto;
+	vertical-align: middle;
+	margin-top: 3px;
+}
+.tcat_menu > .expcolimage {
+	margin-top: 0;
+}
+blockquote {
+	margin: 0;
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+	padding: 10px;
+}
+blockquote cite {
+	font-weight: bold;
+	border-bottom: 1px solid #303030;
+	font-style: normal;
+	display: block;
+	padding-bottom: 3px;
+	margin: 0 0 10px 0;
+}
+blockquote cite span {
+	float: right;
+	font-weight: normal;
+	font-size: 12px;
+	color: #666;
+}
+blockquote cite span.highlight {
+	float: none;
+	font-weight: bold;
+	padding-bottom: 0;
+}
+.codeblock {
+	background: #202020;
+	color: #a0a0a0;
+	border: 1px solid #303030;
+	padding: 10px;
+}
+.codeblock .title {
+	border-bottom: 1px solid #303030;
+	font-weight: bold;
+	padding-bottom: 3px;
+	margin: 0 0 10px 0;
+}
+.codeblock code {
+	overflow: auto;
+	height: auto;
+	max-height: 200px;
+	display: block;
+	font-family: Monaco, Consolas, Courier, monospace;
+	font-size: 13px;
+}
+.smilie {
+	vertical-align: middle;
+}
+.smilie_pointer {
+	cursor: pointer;
+}
+.separator {
+	margin: 5px;
+	padding: 0;
+	height: 0px;
+	font-size: 1px;
+	list-style-type: none;
+}
+.popup_menu .popup_item_container {
+	margin: 1px;
+	text-align: left;
+}
+.popup_menu .popup_item {
+	display: block;
+	padding: 4px;
+	white-space: nowrap;
+	text-decoration: none;
+}
+.popup_menu a.popup_item:hover {
+	text-decoration: none;
+}
+.subject_new {
+	font-weight: bold;
+}
+.highlight {
+	background: #FFFFCC;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.pm_alert {
+	background: #FFF6BF;
+	border: 1px solid #FFD324;
+	text-align: center;
+	padding: 5px 20px;
+	margin-bottom: 15px;
+	font-size: 11px;
+	color: #000;
+}
+.red_alert {
+	background: #FBE3E4;
+	border: 1px solid #A5161A;
+	color: #A5161A;
+	text-align: center;
+	padding: 5px 20px;
+	margin-bottom: 15px;
+	font-size: 11px;
+	word-wrap: break-word;
+}
+.pm_alert a:link, .pm_alert a:visited, .pm_alert a:hover, .pm_alert a:active {
+	color: #0065A8;
+}
+.red_alert a:link, .red_alert a:visited, .red_alert a:hover, .red_alert a:active {
+	color: #A5161A;
+}
+.high_warning {
+	color: #CC0000;
+}
+.moderate_warning {
+	color: #F3611B;
+}
+.low_warning {
+	color: #AE5700;
+}
+.online {
+	color: #15A018;
+}
+.offline {
+	color: #C7C7C7;
+}
+.away {
+        color: #FCD12A;
+}
+div.error {
+	padding: 5px 10px;
+	border-top: 2px solid #FFD324;
+	border-bottom: 2px solid #FFD324;
+	background: #FFF6BF;
+	font-size: 12px;
+	color: #000;
+}
+div.error a:link {
+   color: #CF7359;
+}
+div.error p {
+	margin: 0;
+	color: #000;
+	font-weight: normal;
+}
+div.error p em {
+	font-style: normal;
+	font-weight: bold;
+	padding-left: 24px;
+	display: block;
+	color: #C00;
+	background: url('themes/cerulean/error.png') no-repeat 0;
+}
+div.error ul {
+	margin-left: 24px;
+}
+.pagination {
+	font-size: 11px;
+	padding-top: 10px;
+	margin-bottom: 5px;
+}
+.tfoot .pagination, .tcat .pagination {
+	padding-top: 0;
+}
+.pagination .pages {
+	font-weight: bold;
+}
+.pagination .pagination_current, .pagination a {
+	padding: 3px 6px;
+	margin-bottom: 3px;
+}
+.pagination a {
+	background: #252525;
+	border: 1px solid #303030;
+}
+.pagination .pagination_current {
+	background: none;
+	color: #fff;
+	border: none;
+	font-weight: bold;
+}
+.pagination a:hover {
+	background: #0072BC;
+	color: #fff;
+	border-color: #0072BC;
+	text-decoration: none;
+}
+.pagination .go_page img {
+	margin-bottom: -4px;
+}
+.drop_go_page {
+	background: #303030;
+	padding: 4px;
+}
+.pagination_breadcrumb {
+	background: #252525;
+	border: 1px solid #303030;
+	outline: 1px solid #2D2D2D;
+	padding: 5px;
+	margin-top: 5px;
+	font-weight: normal;
+}
+.pagination_breadcrumb_link {
+	vertical-align: middle;
+	cursor: pointer;
+}
+.thread_legend, .thread_legend dd {
+	margin: 0;
+	padding: 0;
+}
+.thread_legend dd {
+	padding-bottom: 4px;
+	margin-right: 15px;
+}
+.thread_legend img {
+	margin-right: 4px;
+	vertical-align: bottom;
+}
+.forum_legend, .forum_legend dt, .forum_legend dd {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+}
+.forum_legend dd {
+	float: left;
+	margin-right: 10px;
+	margin-top: 17px;
+}
+.forum_legend dt {
+	margin-right: 10px;
+	float: left;
+}
+.success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+.error_message {
+	color: #C00;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+#posts_container {
+	padding: 0;
+}
+.ignored_post {
+	border-top: 3px solid #333;
+	padding: 15px;
+}
+.ignored_post .show_ignored_post {
+	margin-top: -15px;
+}
+.ignored_post .show_ignored_post a.button span {
+	background-position: 0 -400px;
+}
+.post {
+	overflow: hidden;
+}
+.post.classic {
+	padding-top: 15px;
+	background: #252525;
+	color: #A0A0A0;
+}
+.post .post_author {
+	border-bottom: 1px solid #303030;
+	border-top: 1px solid #303030;
+	background: #252525;
+	color: #A0A0A0;
+	padding: 5px;
+	overflow: hidden;
+}
+.post.classic .post_author {
+	border: 1px solid #303030;
+	float: left;
+	width: 15%;
+	margin: 0 1% 15px 0;
+	border-left: 0;
+	padding: 5px 1%;
+	background: #252525;
+	color: #A0A0A0;
+}
+.post .post_author .buddy_status {
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+.post .post_author div.author_avatar img {
+    border-radius: 55%;
+    transition:all 0.3s ease;
+}
+
+.post .post_author div.author_avatar img:hover {
+     border-radius: 0%;
+     transition:all 0.3s ease;
+}
+.post .post_author div.author_avatar {
+	float: left;
+	margin-right: 3px;
+}
+.post.classic .post_author div.author_avatar {
+	float: none;
+	text-align: center;
+	margin-bottom: 8px;
+}
+.post .post_author div.author_avatar img {
+	padding: 2px;
+	border: 1px solid #303030;
+	background: #252525;
+}
+.post .post_author div.author_information {
+	float: left;
+	padding: 6px 8px;
+}
+.post.classic .post_author div.author_information {
+	float: none;
+	padding: 0;
+	text-align: center;
+}
+.post .post_author div.author_statistics {
+	float: right;
+	font-size: 11px;
+	padding: 3px 10px 3px 5px;
+	color: #666;
+	line-height: 1.3;
+}
+.post.classic .post_author div.author_statistics {
+	border-top: 1px dotted #303030;
+	margin: 6px 0 0 0;
+	padding: 6px 6px 3px 6px;
+	float: none;
+}
+.post .post_head {
+	font-size: 11px;
+	padding-bottom: 4px;
+	border-bottom: 1px dotted #303030;
+	margin-bottom: 4px;
+}
+.post .post_head span.post_date {
+	color: #666;
+}
+.post .post_head span.edited_post {
+	font-size: 10px;
+	color: #999;
+}
+.post .post_head span.edited_post a {
+	color: #666;
+}
+.post_body {
+	font-size: 14px;
+	padding: 12px 0;
+}
+.post.classic .post_content {
+	float: left;
+	width: 79%;
+	padding: 0 1% 5px 1%;
+}
+.post_content {
+	padding: 9px 10px 5px 10px;
+	background: #252525;
+	color: #A0A0A0;
+}
+.post_content .signature {
+	margin-top: 5px;
+	border-top: 1px dotted #303030;
+	padding: 10px 0 4px 0;
+}
+.post .post_meta {
+	margin: 4px 0;
+	font-size: 11px;
+	color: #999;
+}
+.post .post_meta a:link, .post .post_meta a:visited {
+	color: #777;
+}
+.post .post_meta a:hover, .post .post_meta a:active {
+	color: #777;
+}
+.post_controls {
+	clear: both;
+	background: #252525;
+	color: #A0A0A0;
+	border-bottom: 1px solid #303030;
+	padding: 5px;
+	overflow: hidden;
+}
+.postbit_buttons > a:link, .postbit_buttons > a:hover, .postbit_buttons > a:visited, .postbit_buttons > a:active {
+	display: inline-block;
+	padding: 2px 5px;
+	margin: 2px;
+	font-size: 11px;
+	background: #007FC6 url('themes/cerulean/thead_bg.png') repeat-x;
+	border: 1px solid #007FC6;
+	color: #FFF;
+}
+.postbit_buttons > a:hover {
+	border-color: #000;
+	color: #000;
+}
+.postbit_buttons a span:before {
+	content: "";
+	display: inline-block;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-right: 5px;
+	font-size: 12px;
+}
+.postbit_buttons a.postbit_find span:before {
+	content: "\f002";
+}
+.postbit_buttons a.postbit_reputation_add span:before {
+	content: "\f067";
+}
+.postbit_buttons a.postbit_email span:before {
+	content: "\f0e0";
+}
+.postbit_buttons a.postbit_website span:before {
+	content: "\f0ac";
+}
+.postbit_buttons a.postbit_pm span:before {
+	content: "\f199";
+}
+.postbit_buttons a.postbit_quote span:before {
+	content: "\f10e";
+}
+.postbit_buttons a.postbit_multiquote span:before {
+	content: "\f055";
+}
+.postbit_buttons a.postbit_multiquote_on span:before {
+	content: "\f056";
+	color: #DB1304;
+}
+.postbit_buttons a.postbit_edit span:before {
+	content: "\f044";
+}
+.postbit_buttons a.postbit_qdelete span:before {
+	content: "\f00d";
+}
+.postbit_buttons a.postbit_qrestore span:before {
+	content: "\f067";
+}
+.postbit_buttons a.postbit_report span:before {
+	content: "\f0a1";
+}
+.postbit_buttons a.postbit_warn span:before {
+	content: "\f0e3";
+}
+.postbit_buttons a.postbit_purgespammer span:before {
+	content: "\f071";
+}
+.postbit_buttons a.postbit_reply_pm span:before {
+	content: "\f112";
+}
+.postbit_buttons a.postbit_reply_all span:before {
+	content: "\f122";
+}
+.postbit_buttons a.postbit_forward_pm span:before {
+	content: "\f064";
+}
+.postbit_buttons a.postbit_delete_pm span:before {
+	content: "\f00d";
+}
+.post:not(.deleted_post) .postbit_qrestore,
+.post:not(.deleted_post) .status_type,
+.post.deleted_post .postbit_mirage {
+    display: none;
+}
+a.button:link, a.button:hover, a.button:visited, a.button:active {
+	background: #007FC6 url('themes/cerulean/thead_bg.png') repeat-x;
+	color: #FFF;
+	display: inline-block;
+	padding: 4px 8px;
+	margin: 2px 2px 6px 2px;
+	border: 1px solid #007FC6;
+	font-size: 14px;
+}
+a.button:hover {
+	border-color: #000;
+	color: #000;
+}
+a.button.small_button {
+	font-size: 13px;
+	margin: 0;
+	padding: 3px 6px;
+}
+a.button span:before {
+	content: "";
+	display: inline-block;
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-right: 5px;
+}
+a.button.new_thread_button span:before {
+	content: "\f086";
+}
+a.button.new_reply_button span:before {
+	content: "\f075";
+}
+a.button.closed_button span:before {
+	content: "\f00d";
+}
+a.button.rate_user_button span:before {
+	content: "\f123";
+}
+a.button.add_buddy_button span:before {
+	content: "\f007";
+}
+a.button.remove_buddy_button span:before {
+	content: "\f00d";
+}
+a.button.add_ignore_button span:before {
+	content: "\f1f6";
+}
+a.button.remove_ignore_button span:before {
+	content: "\f0f3";
+}
+a.button.report_user_button span:before {
+	content: "\f0a1";
+}
+.quick_jump {
+	background: url('themes/cerulean/jump.png') no-repeat 0;
+	width: 13px;
+	height: 13px;
+	padding-left: 13px; /* amount of padding needed for image to fully show */
+	margin-top: -3px;
+	border: none;
+}
+.pollbar {
+	background: url('themes/cerulean/pollbar.png') top left repeat-x;
+	border: 1px solid #3f3f3f;
+	height: 10px;
+}
+.pollbar .percent {
+	display: none;
+}
+.posticons_label {
+	white-space: nowrap;
+}
+/** Login **/
+
+#quick_login {
+  background: #303030;
+  border: 1px solid #252525;
+  padding: 10px;
+}
+
+input#quick_login_password {
+	margin-left: 0px;
+}
+td.quick_password a.lost_password {
+	margin-left: -20px;
+}
+input#quick_login_username, input#quick_login_password {
+	vertical-align: middle;
+	height: 30px;
+	width: 200px;
+	border-radius: 0px 3px 3px 0px;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+	background: #202020;
+    color: #fff;
+}
+input#quick_login_username:focus, input#quick_login_password:focus {
+	border-color: #007FC6;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgb(0,127,198), 0 0 8px rgba(0,127,198, 0.8);
+	box-shadow: inset 0 1px 1px rgba(0,127,198, 0.8), 0 0 8px rgba(0,127,198, 0.8);
+}
+i.quick_username, i.quick_password, i.reg_username, i.reg_password, i.reg_email {
+	background-color: #303030;
+	color: #FFFFFF;
+	border: 1px solid #303030;
+	white-space: nowrap;
+	vertical-align: middle;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+i.quick_username {
+	font-size: 30px;
+	padding: 3px 5px;
+}
+i.quick_password {
+	font-size: 30px;
+	padding: 3px 5px;
+}
+i.quick_password {
+	margin-left: -6px;
+}
+.remember_me label {
+	color: #a0a0a0;
+}
+input.login {
+	background: #252525;
+	width: 60px;
+	height: 60px;
+	color: #FFFFFF;
+	cursor: pointer;
+	border: 5px solid #007FC6;
+	font-family: Tahoma, Verdana, Arial, Sans-Serif;
+	font-size: 13px;
+	font-weight: bold;
+	outline: 0;
+	text-align: center;
+	border-radius: 60px;
+	margin-right: 5px;
+	transition: all 0.8s ease;
+}
+input.login:hover {
+	background: #007FC6;
+	border: 5px solid #252525;
+	color: #FFF;
+}
+i.login, i.register {
+	margin-right: 5px;
+}
+i.logout {
+	margin-left: 5px;
+}
+/** Select Custom **/
+
+.selectWrapper {
+	margin-top: 3px;
+	margin-bottom: 3px;
+    position: relative;
+    width: 100%; 
+    height: 30px;
+}
+
+select {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    width: 100%; 
+    height: 100%;
+    position: relative;
+    z-index: 999;
+    background: #202020;
+    color: #a0a0a0;
+    border: 1px solid #303030;
+	border-radius: 3px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.customSelectCont {
+    background: #202020;
+    color: #a0a0a0;
+    border: 1px solid #303030;
+	border-radius: 3px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-sizing: border-box;
+    padding: 6px 6px 0; 
+    text-align: left;
+    font-size: 11px;
+}
+
+.customSelectCont:after {
+    font-family: 'FontAwesome';
+    content: "\f0d7";
+    color: #fff;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 20px;
+    height: 86%;
+    padding: 4px 0 0;
+    display: block;
+    background: #0068AF;
+	border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-sizing: border-box;
+}
+
+/** Sceditor **/
+
+div.sceditor-toolbar {
+  background: #252525 !important;
+  border-bottom: 1px solid #282828 !important;
+}
+.sceditor-container {
+	background:  #202020 !important;
+	border: 1px solid #282828 !important;
+}
+.sceditor-container iframe, .sceditor-container textarea {
+	background: #202020 !important;
+}
+
+/** Portal Print & Send **/
+
+i.printer {
+	padding-right: 2px;
+	padding-left: 2px;
+	font-size: 16px;
+}
+
+i.sendto {
+	padding-right: 2px;
+	padding-left: 2px;
+	font-size: 16px;
+}
+
+/** Usergroup star rating - FontAwesome **/
+
+.userstar {
+    font-family: "FontAwesome";
+    font-size: 13px;
+    color: #D5CA3C;
+    line-height: 13px;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+.star_0:before {
+    content: "\f006\f006\f006\f006\f006\f006\f006";
+}
+
+.star_1:before {
+    content: "\f005\f006\f006\f006\f006\f006\f006";
+}
+
+.star_2:before {
+    content: "\f005\f005\f006\f006\f006\f006\f006";
+}
+
+.star_3:before {
+    content: "\f005\f005\f005\f006\f006\f006\f006";
+}
+
+.star_4:before {
+    content: "\f005\f005\f005\f005\f006\f006\f006";
+}
+
+.star_5:before {
+    content: "\f005\f005\f005\f005\f005\f006\f006";
+}
+
+.star_6:before {
+    content: "\f005\f005\f005\f005\f005\f005\f006";
+} 
+
+.star_7:before {
+    content: "\f005\f005\f005\f005\f005\f005\f005";
+} 
+
+
+#quickreply_spinner .fa {
+font-size: 36px;
+}
+
+/** Scroll to Top **/
+
+#backtop {
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    margin: 0;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    z-index: 100;
+    font-size: 30px;
+}
+#backtop a:link {
+	color: #0072BC;
+	text-decoration: none;
+}
+#backtop a:visited {
+	color: #0072BC;
+	text-decoration: none;
+}
+#backtop a:hover, a:active {
+	color: #fff;
+	text-decoration: underline;
+}
+/** Polls **/
+
+.progress_bar {
+	border: 1px solid #0065A8;
+	padding: 1px;
+}
+
+.progress {
+	padding: 5px 0;
+	box-sizing: border-box;
+	background: #0065A8 url('themes/cerulean/thead_bg.png') center repeat-x;
+}
+/** jGrowl Start **/
+
+/** Special IE6 Style Positioning **/
+.ie6 {
+	position: absolute;
+}
+.ie6.top-right {
+	right: auto;
+	bottom: auto;
+ left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+ top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+.ie6.top-left {
+ left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+ top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+.ie6.bottom-right {
+ left: expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+ top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+.ie6.bottom-left {
+ left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+ top: expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+.ie6.center {
+ left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+ top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	width: 100%;
+}
+/** jGrowl Styling **/
+.jGrowl {
+	z-index: 9999;
+	color: #fff;
+	font-size: 12px;
+	position: fixed;
+}
+.jGrowl.top-left {
+	left: 0px;
+	top: 0px;
+}
+.jGrowl.top-right {
+	right: 0px;
+	top: 0px;
+}
+.jGrowl.bottom-left {
+	left: 0px;
+	bottom: 0px;
+}
+.jGrowl.bottom-right {
+	right: 0px;
+	bottom: 0px;
+}
+.jGrowl.center {
+	top: 0px;
+	width: 50%;
+	left: 25%;
+}
+/** Cross Browser Styling **/
+
+.center .jGrowl-notification, .center .jGrowl-closer {
+	margin-left: auto;
+	margin-right: auto;
+}
+.jGrowl .jGrowl-notification, .jGrowl .jGrowl-closer {
+	background-color: #000;
+	opacity: .85;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+	zoom: 1;
+	width: 235px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	text-align: left;
+	display: none;
+	border-radius: 5px;
+}
+.jGrowl .jGrowl-notification {
+	min-height: 40px;
+}
+.jGrowl .jGrowl-notification, .jGrowl .jGrowl-closer {
+	margin: 10px;
+}
+.jGrowl .jGrowl-notification .jGrowl-header {
+	font-weight: bold;
+	font-size: .85em;
+}
+.jGrowl .jGrowl-notification .jGrowl-close {
+	z-index: 99;
+	float: right;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+}
+.jGrowl .jGrowl-closer {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	cursor: pointer;
+	font-size: .9em;
+	font-weight: bold;
+	text-align: center;
+}
+
+/** Hide jGrowl when printing **/
+@media print {
+.jGrowl {
+	display: none;
+}
+}
+/** jGrowl End **/
+
+/** Modal Start **/
+
+.blocker {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.75);
+    text-align: center;
+}
+
+.blocker:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.05em;
+}
+
+.blocker.behind {
+    background-color: transparent;
+}
+
+.modal {
+    width: 400px;
+    text-align: left;
+/*    background: #fff; */
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 2;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 10px #000;
+    -moz-box-shadow: 0 0 10px #000;
+    -o-box-shadow: 0 0 10px #000;
+    -ms-box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px #000;
+}
+
+.modal a.close-modal {
+    position: absolute;
+    top: -12.5px;
+    right: -12.5px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    background: url(themes/cerulean/close.png) no-repeat 0 0;
+}
+
+.modal-spinner {
+    display: none;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -32px;
+    margin-top: -32px;
+    background: url(themes/cerulean/spinner_big.gif) no-repeat center center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/** Modal End **/ 
+
+/** Impromptu Start **/
+
+/*! jQuery-Impromptu - v5.2.4 - 2014-05-26
+* http://trentrichardson.com/Impromptu
+* Copyright (c) 2014 Trent Richardson; Licensed MIT */
+
+.jqifade {
+	position: absolute;
+	background-color: #777777;
+}
+div.jqi {
+	width: 400px;
+	max-width: 90%;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	position: absolute;
+	background-color: #ffffff;
+	font-size: 11px;
+	text-align: left;
+	border: solid 1px #eeeeee;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	padding: 7px;
+}
+div.jqi .jqiclose {
+	position: absolute;
+	top: 4px;
+	right: -2px;
+	width: 18px;
+	cursor: default;
+	color: #bbbbbb;
+	font-weight: bold;
+}
+div.jqi .jqistate {
+	background-color: #fff;
+}
+div.jqi .jqititle {
+	padding: 5px 10px;
+	font-size: 16px;
+	line-height: 20px;
+	border-bottom: solid 1px #eeeeee;
+}
+div.jqi .jqimessage {
+	padding: 10px;
+	line-height: 20px;
+	color: #444444;
+}
+div.jqi .jqibuttons {
+	text-align: right;
+	margin: 0 -7px -7px -7px;
+	border-top: solid 1px #e4e4e4;
+	background-color: #f4f4f4;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+}
+div.jqi .jqibuttons button {
+	margin: 0;
+	padding: 15px 20px;
+	background-color: transparent;
+	font-weight: normal;
+	border: none;
+	border-left: solid 1px #e4e4e4;
+	color: #777;
+	font-weight: bold;
+	font-size: 12px;
+}
+div.jqi .jqibuttons button.jqidefaultbutton {
+	color: #489afe;
+}
+div.jqi .jqibuttons button:hover, div.jqi .jqibuttons button:focus {
+	color: #287ade;
+	outline: none;
+}
+.jqiwarning .jqi .jqibuttons {
+	background-color: #b95656;
+}
+/* sub states */
+
+div.jqi .jqiparentstate::after {
+	background-color: #777;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+div.jqi .jqisubstate {
+	position: absolute;
+	top: 0;
+	left: 20%;
+	width: 60%;
+	padding: 7px;
+	border: solid 1px #eeeeee;
+	border-top: none;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+}
+div.jqi .jqisubstate .jqibuttons button {
+	padding: 10px 18px;
+}
+/* arrows for tooltips/tours */
+
+.jqi .jqiarrow {
+	position: absolute;
+	height: 0;
+	width: 0;
+	line-height: 0;
+	font-size: 0;
+	border: solid 10px transparent;
+}
+.jqi .jqiarrowtl {
+	left: 10px;
+	top: -20px;
+	border-bottom-color: #ffffff;
+}
+.jqi .jqiarrowtc {
+	left: 50%;
+	top: -20px;
+	border-bottom-color: #ffffff;
+	margin-left: -10px;
+}
+.jqi .jqiarrowtr {
+	right: 10px;
+	top: -20px;
+	border-bottom-color: #ffffff;
+}
+.jqi .jqiarrowbl {
+	left: 10px;
+	bottom: -20px;
+	border-top-color: #ffffff;
+}
+.jqi .jqiarrowbc {
+	left: 50%;
+	bottom: -20px;
+	border-top-color: #ffffff;
+	margin-left: -10px;
+}
+.jqi .jqiarrowbr {
+	right: 10px;
+	bottom: -20px;
+	border-top-color: #ffffff;
+}
+.jqi .jqiarrowlt {
+	left: -20px;
+	top: 10px;
+	border-right-color: #ffffff;
+}
+.jqi .jqiarrowlm {
+	left: -20px;
+	top: 50%;
+	border-right-color: #ffffff;
+	margin-top: -10px;
+}
+.jqi .jqiarrowlb {
+	left: -20px;
+	bottom: 10px;
+	border-right-color: #ffffff;
+}
+.jqi .jqiarrowrt {
+	right: -20px;
+	top: 10px;
+	border-left-color: #ffffff;
+}
+.jqi .jqiarrowrm {
+	right: -20px;
+	top: 50%;
+	border-left-color: #ffffff;
+	margin-top: -10px;
+}
+.jqi .jqiarrowrb {
+	right: -20px;
+	bottom: 10px;
+	border-left-color: #ffffff;
+}
+
+/** Impromptu End */
+
+/* Custom browser scrollbar (webkit browsers only), you may remove. It won't hurt anything. */
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #007FC6;
+	border: 2px solid #000;
+	border-radius: 6px;
+	padding: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: #252525;
+	border-top: 1px solid #282828;
+	border-left: 1px solid #282828;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+/* END: Custom Scrollbar */	
+		
+		
+		
+		]]>
+		</stylesheet>
+		<stylesheet name="grouppost.css" version="1821"><![CDATA[/*
+ * MyBB: Cerulean Frontend Theme 
+ *
+ * File: grouppost.css
+ * 
+ * Author: Vintagedaddyo
+ *
+ * MyBB Version: 1.8
+ *
+ * Theme Version: 1.2
+ * 
+ */
+
+/** Post Hover **/
+
+.post_content:hover, .post_controls:hover, .post_author:hover {
+	background: #303030 !important;
+}
+
+/** Gid Postbody Border CSS  **/
+
+/** All if needed **/
+
+.gidpostbody {
+	margin-top: 2px;
+	margin-bottom: 2px;
+    padding: 0;
+}
+
+/** Define by group id **/
+
+/** Active **/
+
+.gidpostbody_4 {
+/* define border gid 4*/
+	border: 1px solid #008000;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgb(0,128,0), 0 0 8px rgba(0,128,0, 0.8);
+	box-shadow: inset 0 1px 1px rgba(0,128,0, 0.8), 0 0 8px rgba(0,128,0, 0.8);
+}
+
+.gidpostbody_4:hover {
+/* define border gid 4 */
+   border: 1px dashed #008000;
+}
+
+.gidpostbody_6 {
+/* define border gid 6 */
+   border: 1px solid #CC00CC;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgb(204,0,204), 0 0 8px rgba(204,0,204, 0.8);
+	box-shadow: inset 0 1px 1px rgba(204,0,204, 0.8), 0 0 8px rgba(204,0,204, 0.8);
+}
+
+.gidpostbody_6:hover {
+/* define border gid 6 */
+   border: 1px dashed #CC00CC;
+}
+
+.gidpostbody_3 {
+/* define border gid 3 */
+   border: 1px solid #CC00CC;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgb(204,0,204), 0 0 8px rgba(204,0,204, 0.8);
+	box-shadow: inset 0 1px 1px rgba(204,0,204, 0.8), 0 0 8px rgba(204,0,204, 0.8);
+}
+
+.gidpostbody_3:hover {
+/* define border gid 3 */
+   border: 1px dashed #CC00CC;
+}
+
+.gidpostbody_2 {
+/* define border gid 2 */
+	border: 1px solid #0072BF;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgb(0,114,191), 0 0 8px rgba(0,114,191, 0.8);
+	box-shadow: inset 0 1px 1px rgba(0,114,191, 0.8), 0 0 8px rgba(0,114,191, 0.8);
+}
+
+.gidpostbody_2:hover {
+/* define border gid 2 */
+   border: 1px dashed #0072BF; 
+}]]>
+		</stylesheet>
+	</stylesheets>
+	<templates>
+		<template name="codebuttons" version="1821"><![CDATA[<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/sceditor/themes/{$theme['editortheme']}" type="text/css" media="all" />
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/jquery.sceditor.bbcode.min.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/bbcodes_sceditor.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/plugins/undo.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/icons/monocons.js?ver=1821"></script>
+<script type="text/javascript">
+var partialmode = {$mybb->settings['partialmode']},
+opt_editor = {
+	plugins: "undo",
+	format: "bbcode",
+    icons: "monocons",	
+	bbcodeTrim: true,
+	style: "{$mybb->asset_url}/jscripts/sceditor/styles/jquery.sceditor.{$theme['editortheme']}?ver=1821",
+	rtl: {$lang->settings['rtl']},
+	locale: "mybblang",
+	width: "100%",
+	enablePasteFiltering: true,
+	autoUpdate: true,
+	emoticonsEnabled: {$emoticons_enabled},
+	emoticons: {
+		// Emoticons to be included in the dropdown
+		dropdown: {
+			{$dropdownsmilies}
+		},
+		// Emoticons to be included in the more section
+		more: {
+			{$moresmilies}
+		},
+		// Emoticons that are not shown in the dropdown but will still be converted. Can be used for things like aliases
+		hidden: {
+			{$hiddensmilies}
+		}
+	},
+	emoticonsCompat: true,
+	toolbar: "{$basic1}{$align}{$font}{$size}{$color}{$removeformat}{$basic2}image,{$email}{$link}|video{$emoticon}|{$list}{$code}quote|maximize,source",
+};
+{$editor_language}
+$(function() {
+	$("#{$bind}").sceditor(opt_editor);
+
+	MyBBEditor = $("#{$bind}").sceditor("instance");
+	{$sourcemode}
+});
+</script>]]></template>
+		<template name="footer" version="1820"><![CDATA[<!-- Back to Top -->
+<script type="text/javascript">
+$(function($) {
+$("#backtop").hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 400) {
+      $('#backtop').fadeIn(200);
+    } else {
+      $('#backtop').fadeOut(200);
+    }
+  });
+  $('.go-top').click(function () {
+    $('html,body').animate({
+      scrollTop: 0
+    }, 1000);
+    return false;
+  });
+});
+</script>
+<debugstuff>
+	</div>
+</div>
+<div id="footer">
+	<div class="upper">
+		<div class="wrapper">
+			{$lang_select}
+			{$theme_select}
+			<ul class="menu bottom_links">
+				{$showteamlink}
+				{$contact_us}
+				<li><a href="{$mybb->settings['homeurl']}">{$mybb->settings['homename']}</a></li>
+				<li><a href="#top">{$lang->bottomlinks_returntop}</a></li>
+				<li><a href="<archive_url>">{$lang->bottomlinks_litemode}</a></li>
+				<li><a href="{$mybb->settings['bburl']}/misc.php?action=markread{$post_code_string}">{$lang->bottomlinks_markread}</a></li>
+				<li><a href="{$mybb->settings['bburl']}/misc.php?action=syndication">{$lang->bottomlinks_syndication}</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="lower">
+		<div class="wrapper">
+			<span id="current_time" style="float: left">{$lang->welcome_current_time}</span>
+			<br />
+			<span id="copyright">
+				<!-- MyBB is free software developed and maintained by a volunteer community.
+					It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact,
+					to show your support for MyBB.  If you choose to remove or modify the copyright below,
+					you may be refused support on the MyBB Community Forums.
+
+					This is free software, support us and we'll support you. -->
+				{$lang->powered_by} <a href="https://mybb.com" target="_blank" rel="noopener">MyBB{$mybbversion}</a>, &copy; 2002-{$copy_year} <a href="https://mybb.com" target="_blank" rel="noopener">MyBB Group</a>.
+				<!-- End powered by -->
+								<br />
+				<!-- Begin Theme Credits -->
+				
+				Theme &copy; by: <a href="http://community.mybb.com/user-6029.html" target="_blank">Vintagedaddyo</a>
+				
+                <!-- End Theme Credits -->
+				
+			</span>
+		</div>
+	</div>
+</div>
+<div id='backtop'> <a class="go-top" href="#top" title="Back to Top"><i class="fa fa-arrow-up backtop">&nbsp;</i> </div>
+</div>
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE -->{$task_image}<!-- End task image code -->
+{$auto_dst_detection}
+</div>]]></template>
+		<template name="footer_languageselect" version="1819"><![CDATA[<div class="language">
+<form method="POST" action="{$lang_redirect_url['location']}" id="lang_select">
+	{$lang_redirect_url['form_html']}
+	<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+	<select name="language" onchange="MyBB.changeLanguage();">
+		<optgroup label="{$lang->select_language}">
+			{$lang_options}
+		</optgroup>
+	</select>
+</form>
+</div>]]></template>
+		<template name="footer_themeselect" version="1819"><![CDATA[<div class="theme">
+<form method="POST" action="{$theme_redirect_url['location']}" id="theme_select">
+	{$theme_redirect_url['form_html']}
+	<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+	{$theme_options}
+</form>
+</div>]]></template>
+		<template name="forumbit_depth2_cat" version="1807"><![CDATA[<tr>
+<td class="{$bgcolor}" align="center" width="1"><div class="forum_status forum_{$lightbulb['folder']} ajax_mark_read ficons_{$forum['fid']}" title="{$lightbulb['altonoff']}" id="mark_read_{$forum['fid']}"><i class="fa fa-comments"></i></div></td>
+<td class="{$bgcolor}">
+<strong><a href="{$forum_url}">{$forum['name']}</a></strong>{$forum_viewers_text}<div class="smalltext">{$forum['description']}{$subforums}</div>
+</td>
+<td class="{$bgcolor}" align="center" style="white-space: nowrap">{$threads}{$unapproved['unapproved_threads']}</td>
+<td class="{$bgcolor}" align="center" style="white-space: nowrap">{$posts}{$unapproved['unapproved_posts']}</td>
+<td class="{$bgcolor}" align="right" style="white-space: nowrap">{$lastpost}</td>
+</tr>]]></template>
+		<template name="forumbit_depth2_forum" version="1807"><![CDATA[<tr>
+<td class="{$bgcolor}" align="center" width="1"><div class="forum_status forum_{$lightbulb['folder']} ajax_mark_read ficons_{$forum['fid']}" title="{$lightbulb['altonoff']}" id="mark_read_{$forum['fid']}"><i class="fa fa-comments"></i></div></td>
+<td class="{$bgcolor}">
+<strong><a href="{$forum_url}">{$forum['name']}</a></strong>{$forum_viewers_text}<div class="smalltext">{$forum['description']}{$modlist}{$subforums}</div>
+</td>
+<td class="{$bgcolor}" align="center" style="white-space: nowrap">{$threads}{$unapproved['unapproved_threads']}</td>
+<td class="{$bgcolor}" align="center" style="white-space: nowrap">{$posts}{$unapproved['unapproved_posts']}</td>
+<td class="{$bgcolor}" align="right" style="white-space: nowrap">{$lastpost}</td>
+</tr>]]></template>
+		<template name="forumbit_depth3_statusicon" version="1807"><![CDATA[<div title="{$lightbulb['altonoff']}" class="subforumicon subforum_{$lightbulb['folder']} ajax_mark_read" id="mark_read_{$forum['fid']}"><i class="fa fa-comment"></i></div>]]></template>
+		<template name="forumdisplay_thread_rating" version="1815"><![CDATA[<td align="center" class="{$bgcolor}{$thread_type_class}" id="rating_table_{$thread['tid']}">
+        
+<ul class="star_rating{$not_rated}" id="rating_thread_{$thread['tid']}">
+<li style="width: {$thread['width']}%" class="current_rating" id="current_rating_{$thread['tid']}">{$ratingvotesav}</li>
+<li><a class="five_stars" title="{$lang->five_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=5&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="four_stars" title="{$lang->four_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=4&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="three_stars" title="{$lang->three_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=3&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="two_stars" title="{$lang->two_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=2&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="one_star" title="{$lang->one_star}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=1&amp;my_post_key={$mybb->post_code}"></a></li>
+            </ul>
+
+
+
+        
+    </td>]]></template>
+		<template name="header" version="1820"><![CDATA[<div id="container">
+		<a name="top" id="top"></a>
+		<div id="header">
+			<div id="logo">
+				{$quicksearch}
+				<div class="wrapper">
+					<a href="{$mybb->settings['bburl']}/index.php"><img src="{$theme['logo']}" alt="{$mybb->settings['bbname']}" title="{$mybb->settings['bbname']}" /></a>
+					<ul class="menu top_links">
+						{$menu_portal}
+						{$menu_search}
+						{$menu_memberlist}
+						{$menu_calendar}
+						<li><a href="{$mybb->settings['bburl']}/misc.php?action=help" class="help"><i class="fa fa-question-circle toplinks-help"></i>{$lang->toplinks_help}</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="panel">
+				<div class="upper">
+					<div class="wrapper">
+						<span style="float: right;">{$lang->welcome_current_time}</span>
+						{$welcomeblock}
+					<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+				<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+			</div>
+		</div><br />
+		<div id="content">
+			<div class="wrapper">
+				{$pm_notice}
+				{$remote_avatar_notice}
+				{$bannedwarning}
+				{$bbclosedwarning}
+				{$modnotice}
+				{$pending_joinrequests}
+				{$awaitingusers}
+				<navigation>
+				<br />]]></template>
+		<template name="headerinclude" version="1820"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<!-- Add Favicon -->
+<link rel="Shortcut icon" href="{$theme['imgdir']}/favicon.ico" />
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1820"></script>
+
+
+
+{$stylesheets}
+
+
+<!-- FontAwesome -->
+
+<link rel="stylesheet" href="{$mybb->asset_url}/themes/cerulean/fontawesome/css/font-awesome.min.css">
+
+<!-- Progress Bar -->
+
+<link type="text/css" rel="stylesheet" href="{$mybb->asset_url}/themes/cerulean/progbar/nprogress.css">
+<script type="text/javascript" src="{$mybb->asset_url}/themes/cerulean/progbar/nprogress.js"></script>
+<script>
+	NProgress.configure({ showSpinner: false });
+		$(document).ready(function() {
+			NProgress.start();
+			NProgress.done();
+		});
+</script>
+
+<script type="text/javascript" src="{$mybb->asset_url}/themes/cerulean/js/modernizr-2.6.2.min.js"></script>
+<script>
+$(document).ready(function(){			
+	
+// Custom Select
+var select = $('select');
+select.each(function() {
+   		var firstSelectedText = $(this).find(':selected').text();
+   		$(this).wrap('<div class="selectWrapper"/>');
+   		selectWrapper = $(this).parent();
+   		customSelectCont = $('<span class="customSelectCont"/>').appendTo(selectWrapper);      
+   		customSelectCont.text(firstSelectedText);
+   		$(this).change(function() {
+   			var newOption = $(this).find('option:selected').text()
+            $(this).next(customSelectCont).text(newOption);
+      })             		
+});  
+
+});
+</script>
+
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "{$lang->unknown_error}";
+
+	lang.select2_match = "{$lang->select2_match}";
+	lang.select2_matches = "{$lang->select2_matches}";
+	lang.select2_nomatches = "{$lang->select2_nomatches}";
+	lang.select2_inputtooshort_single = "{$lang->select2_inputtooshort_single}";
+	lang.select2_inputtooshort_plural = "{$lang->select2_inputtooshort_plural}";
+	lang.select2_inputtoolong_single = "{$lang->select2_inputtoolong_single}";
+	lang.select2_inputtoolong_plural = "{$lang->select2_inputtoolong_plural}";
+	lang.select2_selectiontoobig_single = "{$lang->select2_selectiontoobig_single}";
+	lang.select2_selectiontoobig_plural = "{$lang->select2_selectiontoobig_plural}";
+	lang.select2_loadmore = "{$lang->select2_loadmore}";
+	lang.select2_searching = "{$lang->select2_searching}";
+
+	var templates = {
+		modal: '{$jsTemplates['modal']}',
+		modal_button: '{$jsTemplates['modal_button']}'
+	};
+
+	var cookieDomain = "{$mybb->settings['cookiedomain']}";
+	var cookiePath = "{$mybb->settings['cookiepath']}";
+	var cookiePrefix = "{$mybb->settings['cookieprefix']}";
+	var cookieSecureFlag = "{$mybb->settings['cookiesecureflag']}";
+	var deleteevent_confirm = "{$lang->deleteevent_confirm}";
+	var removeattach_confirm = "{$lang->removeattach_confirm}";
+	var loading_text = '{$lang->ajax_loading}';
+	var saving_changes = '{$lang->saving_changes}';
+	var use_xmlhttprequest = "{$mybb->settings['use_xmlhttprequest']}";
+	var my_post_key = "{$mybb->post_code}";
+	var rootpath = "{$mybb->settings['bburl']}";
+	var imagepath = "{$theme['imgdir']}";
+  	var yes_confirm = "{$lang->yes}";
+	var no_confirm = "{$lang->no}";
+	var MyBBEditor = null;
+	var spinner_image = "{$theme['imgdir']}/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' style='display: none' /><i class='fa fa-spinner fa-spin'></i>";
+	var modal_zindex = 9999;
+// -->
+</script>]]></template>
+		<template name="header_menu_calendar" version="1807"><![CDATA[<li><a href="{$mybb->settings['bburl']}/calendar.php" class="calendar"><i class="fa fa-calendar toplinks-calendar"></i>{$lang->toplinks_calendar}</a></li>]]></template>
+		<template name="header_menu_memberlist" version="1807"><![CDATA[<li><a href="{$mybb->settings['bburl']}/memberlist.php" class="memberlist"><i class="fa fa-users toplinks-memberlist"></i>{$lang->toplinks_memberlist}</a></li>]]></template>
+		<template name="header_menu_portal" version="1807"><![CDATA[<li><a href="{$mybb->settings['bburl']}/portal.php" class="portal"><i class="fa fa-bell toplinks-portal"></i>{$lang->toplinks_portal}</a></li>]]></template>
+		<template name="header_menu_search" version="1807"><![CDATA[<li><a href="{$mybb->settings['bburl']}/search.php" class="search"><i class="fa fa-search toplinks-search"></i>{$lang->toplinks_search}</a></li>]]></template>
+		<template name="header_quicksearch" version="1807"><![CDATA[<form action="{$mybb->settings['bburl']}/search.php" method="post">
+						<fieldset id="search">
+                            <input name="keywords" type="text" class="textbox" placeholder="Search..." />
+                            <i class="fa fa-search search_icon"></i><input value="" type="submit" class="search_icon" />
+							<input type="hidden" name="action" value="do_search" />
+							<input type="hidden" name="postthread" value="1" />
+						</fieldset>
+						</form>]]></template>
+		<template name="header_welcomeblock_guest" version="1819"><![CDATA[						<!-- Continuation of div(class="upper") as opened in the header template -->
+						<span class="welcome">{$lang->welcome_guest} <a href="{$mybb->settings['bburl']}/member.php?action=login" onclick="$('#quick_login').modal({ fadeDuration: 250, keepelement: true, zIndex: (typeof modal_zindex !== 'undefined' ? modal_zindex : 9999) }); return false;" class="login"><i class="fa fa-sign-in panel-login"></i>{$lang->welcome_login}</a> <a href="{$mybb->settings['bburl']}/member.php?action=register" class="register"><i class="fa fa-user-plus panel-register"></i>{$lang->welcome_register}</a></span>
+					</div>
+				</div>
+				<div class="modal" id="quick_login" style="display: none;">
+					<form method="post" action="{$mybb->settings['bburl']}/member.php">
+						<input name="action" type="hidden" value="do_login" />
+						<input name="url" type="hidden" value="" />
+						<input name="quick_login" type="hidden" value="1" />
+						<input name="my_post_key" type="hidden" value="{$mybb->post_code}" />
+						<table width="100%" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" border="0" class="quick_login">
+                           {$loginform}
+						</table>
+					</form>
+				</div>
+				<script type="text/javascript">
+					$("#quick_login input[name='url']").val($(location).attr('href'));
+				</script>]]></template>
+		<template name="header_welcomeblock_guest_login_modal" version="1819"><![CDATA[							<tr>
+								<td class="login_form quick_username">
+                                  <i class="fa fa-user quick_username"></i><input value="" name="quick_username" type="text" placeholder="{$login_username}" id="quick_login_username" class="textbox">
+                                </td>
+                              	<td class="login_form submit"  rowspan="2" vertical-align="middle">
+									<input name="submit" type="submit" class="login" value="{$lang->login}" />
+								</td>  						
+							<tr>
+                            	<td class="login_form quick_password">
+                                  <i class="fa fa-key quick_password"></i><input value="" name="quick_password" type="password" placeholder="{$lang->password}" id="quick_login_password" class="textbox">
+                                  <a href="{$mybb->settings['bburl']}/member.php?action=lostpw" class="lost_password"><i class="fa fa-lightbulb-o fa-lg" style="color: #007FC6;" title="{$lang->lost_password}"></i></a>
+								</td>
+							</tr>							
+					        <tr>
+								<td class="login_form remember_me">
+									<input name="quick_remember" id="quick_login_remember" type="checkbox" value="yes" class="checkbox" checked="checked" />
+									<label for="quick_login_remember">{$lang->remember_me}</label>
+								</td>
+							</tr>]]></template>
+		<template name="header_welcomeblock_member_admin" version="1807"><![CDATA[<li><a href="{$mybb->settings['bburl']}/{$admin_dir}/index.php" class="admincp"><i class="fa fa-cog panel-admincp"></i>{$lang->welcome_admin}</a></li>]]></template>
+		<template name="header_welcomeblock_member_moderator" version="1807"><![CDATA[<li><a href="{$mybb->settings['bburl']}/modcp.php" class="modcp"><i class="fa fa-file-text panel-modcp"></i>{$lang->welcome_modcp}</a></li>]]></template>
+		<template name="header_welcomeblock_member_user" version="1821"><![CDATA[<li><a href="{$mybb->settings['bburl']}/usercp.php" class="usercp"><i class="fa fa-user panel-usercp"></i>{$lang->welcome_usercp}</a></li>]]></template>
+		<template name="index" version="1818"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+lang.no_new_posts = "{$lang->no_new_posts}";
+lang.click_mark_read = "{$lang->click_mark_read}";
+// -->
+</script>
+</head>
+<body>
+{$header}
+{$forums}
+{$boardstats}
+
+<dl class="forum_legend smalltext">
+<dt><div class="forum_status forum_on"><i class="fa fa-comments"></i></div></dt>
+<dd>{$lang->new_posts}</dd>
+
+<dt><div class="forum_status forum_off"><i class="fa fa-comments"></i></div></dt>
+<dd>{$lang->no_new_posts}</dd>
+
+<dt><div class="forum_status forum_offclose"><i class="fa fa-comments"></i></div></dt>
+<dd>{$lang->forum_closed}</dd>
+
+<dt><div class="forum_status forum_offlink"><i class="fa fa-comments"></i></div></dt>
+<dd>{$lang->forum_redirect}</dd>
+</dl>
+<br class="clear" />
+{$footer}
+</body>
+</html>]]></template>
+		<template name="index_boardstats" version="1820"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<thead>
+<tr>
+<td class="thead{$collapsedthead['boardstats']}">
+<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['boardstats']}.png" id="boardstats_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div>
+<div><strong>{$lang->boardstats}</strong></div>
+</td>
+</tr>
+</thead>
+<tbody style="{$collapsed['boardstats_e']}" id="boardstats_e">
+{$whosonline}
+{$birthdays}
+{$forumstats}
+<tr>
+	<td class="tfoot" style="text-align: right">
+		<span class="smalltext">
+			{$logoutlink}
+			{$statspage}
+		</span>
+	</td>
+</tr>
+</tbody>
+</table>
+<br />]]></template>
+		<template name="index_logoutlink" version="1818"><![CDATA[<a href="member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}"><i class="fa fa-power-off tfoot-logout"></i>{$lang->index_logout}</a> |]]></template>
+		<template name="index_showteamlink" version="1818"><![CDATA[<a href="showteam.php"><i class="fa fa-group tfoot-team"></i>{$lang->forumteam}</a>]]></template>
+		<template name="index_statspage" version="1820"><![CDATA[ <a href="stats.php"><i class="fa fa-bar-chart tfoot-stats"></i>{$lang->forumstats}</a>]]></template>
+		<template name="memberlist" version="1821"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->member_list}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+{$multipage}
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="7">
+    <div class="float_left">
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->a}" style="padding: 5px;">{$lang->a}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->b}" style="padding: 5px;">{$lang->b}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->c}" style="padding: 5px;">{$lang->c}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->d}" style="padding: 5px;">{$lang->d}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->e}" style="padding: 5px;">{$lang->e}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->f}" style="padding: 5px;">{$lang->f}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->g}" style="padding: 5px;">{$lang->g}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->h}" style="padding: 5px;">{$lang->h}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->i}" style="padding: 5px;">{$lang->i}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->j}" style="padding: 5px;">{$lang->j}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->k}" style="padding: 5px;">{$lang->k}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->l}" style="padding: 5px;">{$lang->l}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->m}" style="padding: 5px;">{$lang->m}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->n}" style="padding: 5px;">{$lang->n}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->o}" style="padding: 5px;">{$lang->o}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->p}" style="padding: 5px;">{$lang->p}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->q}" style="padding: 5px;">{$lang->q}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->r}" style="padding: 5px;">{$lang->r}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->s}" style="padding: 5px;">{$lang->s}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->t}" style="padding: 5px;">{$lang->t}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->u}" style="padding: 5px;">{$lang->u}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->v}" style="padding: 5px;">{$lang->v}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->w}" style="padding: 5px;">{$lang->w}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->x}" style="padding: 5px;">{$lang->x}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->y}" style="padding: 5px;">{$lang->y}</a>
+        <a href="memberlist.php?username_match=begins&amp;username={$lang->z}" style="padding: 5px;">{$lang->z}</a>
+    </div><div class="float_right" style="padding-top: 4px;">
+    <a href="showteam.php"><strong>{$lang->forumteam}</strong></a>
+</div>
+</tr>
+</table>
+{$multipage}<br />{$users}
+<br class="clear" />
+<br />
+<form method="post" action="memberlist.php">
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="3">
+    <div class="float_right">
+        <strong><a href="memberlist.php?action=search">{$lang->advanced_search}</a></strong>
+    </div>
+    <div><strong>{$lang->search_members}</strong></div>
+</td>
+</tr>
+<tr>
+    <td class="tcat"><strong><label for="username">{$lang->username}</label></strong></td>
+    <td class="tcat"><strong><label for="website">{$lang->website}</label></strong></td>
+    <td class="tcat"><strong><label for="sort">{$lang->sort_by}</label></strong></td>
+</tr>
+<tr>
+    <td class="trow1" width="33%" style="vertical-align: top;">
+        {$lang->contains}<br />
+        <input type="text" class="textbox" name="username" id="username" style="width: 99%; margin-top: 4px;" value="{$search_username}" />
+    </td>
+    <td class="trow1" width="33%" style="vertical-align: top;">
+        {$lang->contains}<br />
+        <input type="text" class="textbox" name="website" id="website" style="width: 99%; margin-top: 4px;" value="{$search_website}" />
+    </td>
+    <td class="trow1" width="33%">
+        <div class="smalltext" style="margin-bottom: 3px;">
+            <input type="radio" class="radio" name="order" id="order_asc" value="ascending"{$order_check['ascending']} /> <label for="order_asc">{$lang->order_asc}</label>&nbsp;
+            <input type="radio" class="radio" name="order" id="order_desc" value="descending"{$order_check['descending']} /> <label for="order_desc">{$lang->order_desc}</label>
+        </div>
+        <select name="sort" id="sort" style="width: 99%;">
+            <option value="username"{$sort_selected['username']}>{$lang->sort_by_username}</option>
+            <option value="regdate"{$sort_selected['regdate']}>{$lang->sort_by_regdate}</option>
+            <option value="lastvisit"{$sort_selected['lastvisit']}>{$lang->sort_by_lastvisit}</option>
+            <option value="postnum"{$sort_selected['postnum']}>{$lang->sort_by_posts}</option>
+            <option value="threadnum"{$sort_selected['threadnum']}>{$lang->sort_by_threads}</option>
+            {$referrals_option}
+        </select>
+    </td>
+</tr>
+</table>
+<div align="center"><br /><input type="submit" class="button" name="submit" value="{$lang->search}" /></div>
+</form>
+<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/select2/select2.css?ver=1807">
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/select2/select2.min.js?ver=1806"></script>
+<script type="text/javascript">
+<!--
+if(use_xmlhttprequest == "1")
+{
+	MyBB.select2();
+	$("#username").select2({
+		placeholder: "{$lang->search_user}",
+		minimumInputLength: 2,
+		multiple: false,
+		allowClear: true,
+		ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
+			url: "xmlhttp.php?action=get_users",
+			dataType: 'json',
+			data: function (term, page) {
+				return {
+					query: term, // search term
+				};
+			},
+			results: function (data, page) { // parse the results into the format expected by Select2.
+				// since we are using custom formatting functions we do not need to alter remote JSON data
+				return {results: data};
+			}
+		},
+		initSelection: function(element, callback) {
+			var value = $(element).val();
+			if (value !== "") {
+				callback({
+					id: value,
+					text: value
+				});
+			}
+		},
+       // Allow the user entered text to be selected as well
+       createSearchChoice:function(term, data) {
+			if ( $(data).filter( function() {
+				return this.text.localeCompare(term)===0;
+			}).length===0) {
+				return {id:term, text:term};
+			}
+		},
+	});
+
+  	$('[for=username]').on('click', function(){
+		$("#username").select2('open');
+		return false;
+	});
+}
+// -->
+</script>
+</body>
+</html>]]></template>
+		<template name="memberlist_user" version="1819"><![CDATA[<tr>
+  <div class="memberlistprofile">
+    <center>
+    <div class="memberlist_avatar">{$user['avatar']}</div>
+	<div class="usertitle"><span class="grouptag grouptag_{$usergroup['gid']}">&nbsp; {$user['usertitle']}</span><br /></div>
+{$usergroup['groupimage']}
+    <div class="userstar"><span style="text-align: center;" class="userstar star_{$user['stars']}" title="{$user['usertitle']}"></span></div>
+<h4 class="memberlistname">{$user['profilelink']}</h4>
+    <div class="memberlistbio"><i class="infothead-date fa fa-pencil-square" title="Joined"></i> {$user['regdate']}</div>
+    <div class="infothead">
+      <center>
+        <li class="fa fa-comments"></li>
+        Comments: {$user['postnum']}
+        <li class="fa fa-comments-o"></li>
+        Threads:{$user['threadnum']}
+      </center>
+    </div>
+  </div>
+</tr>
+</ br>]]></template>
+		<template name="memberlist_user_groupimage" version="1819"><![CDATA[<div class="team_usergroup_{$usergroup['gid']}" title="{$usergroup['title']}">{$usergroup['image']}</div><br />]]></template>
+		<template name="member_profile" version="1820"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->profile}</title>
+{$headerinclude}
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1820"></script>
+</head>
+<body>
+{$header}
+<fieldset>
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<td width="75%">
+				<span class="largetext"><strong>{$formattedname}</strong></span><br />
+				<span class="smalltext">
+					<span class="grouptag grouptag_{$memprofile['usergroup']}">&nbsp; {$usertitle}</span><br />
+					{$groupimage}
+					<span style="text-align: center;" class="userstar star_{$stars}" title="{$usertitle}"></span> <br />
+					<br />
+					<strong>{$lang->registration_date}</strong> {$memregdate}<br />
+					<strong>{$lang->date_of_birth}</strong> {$membday} {$membdayage}<br />
+					<strong>{$lang->local_time}</strong> {$localtime}<br />
+					<strong>{$lang->postbit_status}</strong> {$online_status}
+				</span>
+			</td>
+			<td width="25%" align="right" valign="middle">{$avatar}</td>
+		</tr>
+	</table>
+</fieldset>
+<br />
+{$awaybit}{$bannedbit}
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr>
+		<td width="50%" valign="top">
+			<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+				<tr>
+					<td colspan="2" class="thead"><strong>{$lang->users_forum_info}</strong></td>
+				</tr>
+				<tr>
+					<td class="trow1" style="width: 30%;"><strong>{$lang->joined}</strong></td>
+					<td class="trow1">{$memregdate}</td>
+				</tr>
+				<tr>
+					<td class="trow2"><strong>{$lang->lastvisit}</strong></td>
+					<td class="trow2">{$memlastvisitdate}</td>
+				</tr>
+				<tr>
+					<td class="trow1"><strong>{$lang->total_posts}</strong></td>
+					<td class="trow1">{$memprofile['postnum']} ({$lang->ppd_percent_total}){$findposts}</td>
+				</tr>
+				<tr>
+					<td class="trow2"><strong>{$lang->total_threads}</strong></td>
+					<td class="trow2">{$memprofile['threadnum']} ({$lang->tpd_percent_total}){$findthreads}</td>
+				</tr>
+				<tr>
+					<td class="trow1"><strong>{$lang->timeonline}</strong></td>
+					<td class="trow1">{$timeonline}</td>
+				</tr>
+				{$referrals}
+				{$reputation}
+				{$warning_level}
+			</table>
+			{$contact_details}
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td width="50%" valign="top">
+			{$profilefields}
+			{$signature}
+			{$modoptions}
+			{$adminoptions}
+			<div style="text-align: center">{$buddy_options}{$ignore_options}{$report_options}</div>
+		</td>
+	</tr>
+</table>
+{$footer}
+</body>
+</html>]]></template>
+		<template name="member_profile_groupimage" version="1819"><![CDATA[<div class="team_usergroup_{$memprofile['usergroup']}" alt="{$usertitle}" title="{$usertitle}">{$memperms['image']}</div><br />]]></template>
+		<template name="misc_syndication_forumlist" version="1819"><![CDATA[<!--<select name="forums[]" size="10" multiple="multiple">-->
+<select name="forums[]">
+<option value="all" {$addsel}>{$lang->syndicate_all_forums}</option>
+<option value="all">----------------------</option>
+{$forumlistbits}
+</select>]]></template>
+		<template name="modcp_nav_forums_posts" version="1818"><![CDATA[	<tr>
+		<td class="tcat tcat_menu tcat_collapse{$collapsedimg['modcpforums']}">
+			<div class="expcolimage"><img src="{$theme['imgdir']}/modcp/collapse{$collapsedimg['modcpforums']}.png" id="modcpforums_img" class="expander" alt="[-]" title="[-]" /></div>
+			<div><span class="smalltext"><strong>{$lang->mcp_nav_forums}</strong></span></div>
+		</td>
+	</tr>
+	<tbody style="{$collapsed['modcpforums_e']}" id="modcpforums_e">
+		{$nav_announcements}
+		{$nav_modqueue}
+		{$nav_reportcenter}
+		{$nav_modlogs}
+	</tbody>]]></template>
+		<template name="modcp_nav_users" version="1818"><![CDATA[	<tr>
+		<td class="tcat tcat_menu tcat_collapse{$collapsedimg['modcpusers']}">
+			<div class="expcolimage"><img src="{$theme['imgdir']}/modcp/collapse{$collapsedimg['modcpusers']}.png" id="modcpusers_img" class="expander" alt="[-]" title="[-]" /></div>
+			<div><span class="smalltext"><strong>{$lang->mcp_nav_users}</strong></span></div>
+		</td>
+	</tr>
+	<tbody style="{$collapsed['modcpusers_e']}" id="modcpusers_e">
+		{$nav_editprofile}
+		{$nav_banning}
+		{$nav_warninglogs}
+		{$nav_ipsearch}
+	</tbody>]]></template>
+		<template name="polls_showresults_resultbit" version="1819"><![CDATA[<tr>
+<td class="{$optionbg}" align="right" width="400">{$option}{$votestar}</td>
+<td class="{$optionbg}" width="300">
+<div class="progress_bar" title="{$percent}%">
+<div class="progress" style="width: {$percent}%;"></div>
+</div>{$userlist}
+</td>
+<td class="{$optionbg}" width="70" align="center">{$votes}</td>
+<td class="{$optionbg}" width="30" align="center">{$percent}%</td>
+</tr>]]></template>
+		<template name="portal_announcement" version="1819"><![CDATA[<table cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead"><strong>{$icon} <a href="{$mybb->settings['bburl']}/{$announcement['threadlink']}">{$announcement['subject']}</a></strong></td>
+</tr>
+<tr>
+<td class="trow2" align="right">
+<span class="smalltext">{$lang->posted_by} {$profilelink}  - {$anndate} - {$lang->forum} <a href="{$mybb->settings['bburl']}/{$announcement['forumlink']}">{$announcement['forumname']}</a> {$numcomments}</span>
+</td>
+</tr>
+<tr>
+<td class="trow1">
+<table border="0" cellpadding="{$theme['tablespace']}" class="tfixed" style="width: 100%;">
+	<tr>
+		{$avatar}
+		<td class="trow1 scaleimages">
+			<p>
+				{$message}
+			</p>
+			{$post['attachments']}
+		</td>
+	</tr>
+	<tr>
+		<td align="right" colspan="2" valign="bottom">
+			<span class="smalltext">
+				<a href="{$mybb->settings['bburl']}/printthread.php?tid={$announcement['tid']}"><i class="fa fa-print printer" alt="{$lang->print_this_item}" title="{$lang->print_this_item}"></i></a>{$senditem}
+			</span>
+		</td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />]]></template>
+		<template name="portal_announcement_send_item" version="1819"><![CDATA[&nbsp;<a href="{$mybb->settings['bburl']}/sendthread.php?tid={$announcement['tid']}"><i class="fa fa-envelope sendto" alt="{$lang->send_to_friend}" title="{$lang->send_to_friend}"></i></a>]]></template>
+		<template name="postbit" version="1821"><![CDATA[{$ignore_bit}{$deleted_bit}
+<a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
+<div class="post {$unapproved_shade} gidpostbody gidpostbody_{$usergroup['gid']}" style="{$post_visibility}" id="post_{$post['pid']}">
+<div class="post_author">
+	{$post['useravatar']}
+	<div class="author_information">
+			<strong><span class="largetext">{$post['profilelink']}</span></strong> {$post['onlinestatus']}<br />
+			<span class="smalltext">
+				<span class="grouptag grouptag_{$usergroup['gid']}">&nbsp; {$post['usertitle']}</span><br />
+				<span style="text-align: center;" class="userstar star_{$post['stars']}" title="{$post['usertitle']}"></span><br />
+				{$post['groupimage']}
+			</span>
+	</div>
+	<div class="author_statistics">
+		{$post['user_details']}
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		{$post['posturl']}
+		{$post['icon']}
+		<span class="post_date">{$post['postdate']} <span class="post_edit" id="edited_by_{$post['pid']}">{$post['editedmsg']}</span></span>
+		{$post['subject_extra']}
+	</div>
+	<div class="post_body scaleimages" id="pid_{$post['pid']}">
+		{$post['message']}
+	</div>
+	{$post['attachments']}
+	{$post['signature']}
+	<div class="post_meta" id="post_meta_{$post['pid']}">
+		{$post['iplogged']}
+		<div class="float_right">
+			{$post['poststatus']}
+		</div>
+	</div>
+	{$post['input_editreason']}
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		{$post['button_email']}{$post['button_pm']}{$post['button_www']}{$post['button_find']}{$post['button_rep']}
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		{$post['button_edit']}{$post['button_quickdelete']}{$post['button_quickrestore']}{$post['button_quote']}{$post['button_multiquote']}{$post['button_report']}{$post['button_warn']}{$post['button_purgespammer']}{$post['button_reply_pm']}{$post['button_replyall_pm']}{$post['button_forward_pm']}{$post['button_delete_pm']}
+	</div>
+</div>
+</div>]]></template>
+		<template name="postbit_away" version="1819"><![CDATA[<a href="{$post['profilelink_plain']}" title="{$lang->postbit_status_away}"><i class="fa fa-times-circle away" alt="{$lang->postbit_status_away}"></i></a>]]></template>
+		<template name="postbit_classic" version="1821"><![CDATA[{$ignore_bit}{$deleted_bit}
+<a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
+<div class="post classic {$unapproved_shade} gidpostbody gidpostbody_{$usergroup['gid']}" style="{$post_visibility}" id="post_{$post['pid']}">
+<div class="post_author scaleimages">
+	{$post['useravatar']}
+	<div class="author_information">
+			<strong><span class="largetext">{$post['profilelink']}</span></strong> {$post['onlinestatus']}<br />
+			<span class="smalltext">
+				<span class="grouptag grouptag_{$usergroup['gid']}">&nbsp; {$post['usertitle']}</span><br />
+				<span style="text-align: center;" class="userstar star_{$post['stars']}" title="{$post['usertitle']}"></span><br /> 
+				{$post['groupimage']}
+			</span>
+	</div>
+	<div class="author_statistics">
+		{$post['user_details']}
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		{$post['posturl']}
+		{$post['icon']}
+		<span class="post_date">{$post['postdate']} <span class="post_edit" id="edited_by_{$post['pid']}">{$post['editedmsg']}</span></span>
+	{$post['subject_extra']}
+	</div>
+	<div class="post_body scaleimages" id="pid_{$post['pid']}">
+		{$post['message']}
+	</div>
+	{$post['attachments']}
+	{$post['signature']}
+	<div class="post_meta" id="post_meta_{$post['pid']}">
+		{$post['iplogged']}
+		<div class="float_right">
+			{$post['poststatus']}
+		</div>
+	</div>
+	{$post['input_editreason']}
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		{$post['button_email']}{$post['button_pm']}{$post['button_www']}{$post['button_find']}{$post['button_rep']}
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		{$post['button_edit']}{$post['button_quickdelete']}{$post['button_quickrestore']}{$post['button_quote']}{$post['button_multiquote']}{$post['button_report']}{$post['button_warn']}{$post['button_purgespammer']}{$post['button_reply_pm']}{$post['button_replyall_pm']}{$post['button_forward_pm']}{$post['button_delete_pm']}
+	</div>
+</div>
+</div>]]></template>
+		<template name="postbit_groupimage" version="1819"><![CDATA[<div class="team_usergroup_{$usergroup['gid']}" title="{$usergroup['title']}">{$usergroup['image']}</div>]]></template>
+		<template name="postbit_offline" version="1819"><![CDATA[<i class="fa fa-times-circle offline" title="{$lang->postbit_status_offline}" alt="{$lang->postbit_status_offline}"></i>]]></template>
+		<template name="postbit_online" version="1819"><![CDATA[<a href="online.php" title="{$lang->postbit_status_online}"><i class="fa fa-check-circle online" alt="{$lang->postbit_status_online}"></i></a>]]></template>
+		<template name="private_messagebit" version="1815"><![CDATA[<tr>
+	<td align="center" class="trow1" width="1%"><span class="x_{$msgstatus}" title="{$msgalt}"></span></td>
+	<td align="center" class="trow2" width="1%">{$icon}</td>
+	<td class="trow1" width="35%"><a class="{$msgstatus}" href="private.php?action=read&amp;pmid={$message['pmid']}">{$message['subject']}</a>{$denyreceipt}</td>
+	<td align="center" class="trow2">{$tofromusername}</td>
+	<td class="trow1" align="right" style="white-space: nowrap"><span class="smalltext">{$senddate}</span></td>
+	<td class="trow2" align="center"><input type="checkbox" class="checkbox" name="check[{$message['pmid']}]" value="1" /></td>
+</tr>]]></template>
+		<template name="private_search_messagebit" version="1815"><![CDATA[<tr>
+	<td align="center" class="trow1" width="1%"><span class="x_{$msgstatus}" title="{$msgalt}"></span></td>
+	<td align="center" class="trow2" width="1%">{$icon}</td>
+	<td class="trow1" width="35%"><a class="{$msgstatus}" href="private.php?action=read&amp;pmid={$message['pmid']}">{$message['subject']}</a>{$denyreceipt}
+	<br />{$message['message']}</td>
+	<td align="center" class="trow2">{$tofromusername}</td>
+	<td align="center" class="trow1"><a href="private.php?fid={$message['folder']}">{$foldername}</a></td>
+	<td class="trow2" align="center" style="white-space: nowrap"><span class="smalltext">{$senddate}</span></td>
+	<td class="trow1" align="center"><input type="checkbox" class="checkbox" name="check[{$message['pmid']}]" value="1" /></td>
+</tr>]]></template>
+		<template name="search_forumlist" version="1819"><![CDATA[<!-- <select name="forums[]" size="20" multiple="multiple"> -->
+<select name="forums[]">
+<option value="all" selected="selected">{$lang->search_all_forums}</option>
+<option value="all">----------------------</option>
+{$forumlistbits}
+</select>]]></template>
+		<template name="showthread_poll_resultbit" version="1819"><![CDATA[<tr>
+<td class="{$optionbg}" align="right" width="400">{$option}{$votestar}</td>
+<td class="{$optionbg}" width="300">
+<div class="progress_bar" title="{$percent}%">
+<div class="progress" style="width: {$percent}%;"></div>
+</div>
+</td>
+<td class="{$optionbg}" width="70" align="center">{$votes}</td>
+<td class="{$optionbg}" width="30" align="center">{$percent}%</td>
+</tr>]]></template>
+		<template name="showthread_quickreply" version="1818"><![CDATA[<div id="quickreply_spinner" class="showthread_spinner" style="display: none"><img src="{$theme['imgdir']}/spinner.gif" style="display: none;" /><i class="fa fa-spinner fa-spin"></i></div>
+<br />
+{$moderation_notice}
+<form method="post" action="newreply.php?tid={$tid}&amp;processed=1" name="quick_reply_form" id="quick_reply_form">
+	<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+	<input type="hidden" name="subject" value="RE: {$reply_subject}" />
+	<input type="hidden" name="action" value="do_newreply" />
+	<input type="hidden" name="posthash" value="{$posthash}" id="posthash" />
+	<input type="hidden" name="quoted_ids" value="" id="quoted_ids" />
+	<input type="hidden" name="lastpid" id="lastpid" value="{$last_pid}" />
+	<input type="hidden" name="from_page" value="{$page}" />
+	<input type="hidden" name="tid" value="{$tid}" />
+	<input type="hidden" name="method" value="quickreply" />
+
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+		<thead>
+			<tr>
+				<td class="thead{$collapsedthead['quickreply']}" colspan="2">
+					<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['quickreply']}.png" id="quickreply_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div>
+					<div><strong>{$lang->quick_reply}</strong></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody style="{$collapsed['quickreply_e']}" id="quickreply_e">
+			<tr>
+				<td class="{$trow}" valign="top" width="22%">
+					<strong>{$lang->message}</strong><br />
+					<span class="smalltext">{$lang->message_note}<br /><br />
+					{$option_signature}
+					<label><input type="checkbox" class="checkbox" name="postoptions[disablesmilies]" value="1" />&nbsp;<strong>{$lang->disable_smilies}</strong></label>{$closeoption}</span>
+				</td>
+				<td class="{$trow}">
+					<div style="width: 95%">
+						<textarea style="width: 100%; padding: 4px; margin: 0;" rows="8" cols="80" name="message" id="message" tabindex="1"></textarea>
+					</div>
+					<div class="editor_control_bar" style="width: 95%; padding: 4px; margin-top: 3px; display: none;" id="quickreply_multiquote">
+						<span class="smalltext">
+							{$lang->quickreply_multiquote_selected} <a href="./newreply.php?tid={$tid}&amp;load_all_quotes=1" onclick="return Thread.loadMultiQuoted();">{$lang->quickreply_multiquote_now}</a> {$lang->or} <a href="javascript:void(0)" onclick="Thread.clearMultiQuoted(); return false;">{$lang->quickreply_multiquote_deselect}</a>.
+						</span>
+					</div>
+				</td>
+			</tr>
+			{$captcha}
+			<tr>
+				<td colspan="2" align="center" class="tfoot"><input type="submit" class="button" value="{$lang->post_reply}" tabindex="2" accesskey="s" id="quick_reply_submit" /> <input type="submit" class="button" name="previewpost" value="{$lang->preview_post}" tabindex="3" /></td>
+			</tr>
+		</tbody>
+	</table>
+</form>]]></template>
+		<template name="showthread_ratethread" version="1821"><![CDATA[<div class="star_rating_container">
+	<scriptstyle="margin-top: 6px; padding-right: 10px;" class="float_right">
+		<script type="text/javascript">
+		<!--
+			lang.ratings_update_error = "{$lang->ratings_update_error}";
+		// -->
+		</script>
+        <script type="text/javascript" src="{$mybb->asset_url}/jscripts/rating.js?ver=1821"></script>
+        <div id="success_rating_{$thread['tid']}" style="float: left; padding-top: 2px; padding-right: 10px;">&nbsp;</div>
+<strong style="float: left; padding-right: 10px;">{$lang->thread_rating}</strong>
+        <div class="inline_rating">
+
+<ul class="star_rating{$not_rated}" id="rating_thread_{$thread['tid']}">
+<li style="width: {$thread['width']}%" class="current_rating" id="current_rating_{$thread['tid']}">{$ratingvotesav}</li>
+<li><a class="five_stars" title="{$lang->five_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=5&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="four_stars" title="{$lang->four_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=4&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="three_stars" title="{$lang->three_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=3&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="two_stars" title="{$lang->two_stars}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=2&amp;my_post_key={$mybb->post_code}"></a></li>
+<li><a class="one_star" title="{$lang->one_star}" href="./ratethread.php?tid={$thread['tid']}&amp;rating=1&amp;my_post_key={$mybb->post_code}"></a></li>
+            </ul>
+        </div>
+</div>
+<style>
+.sharethread a:link {
+	color: #0072BC;
+	text-decoration: none;
+}
+.sharethread a:visited {
+	color: #0072BC;
+	text-decoration: none;
+}
+.sharethread a:hover,
+.sharethread a:active {
+	color: #A0A0A0;
+	text-decoration: none;
+}
+.sharethread {
+     float:left;
+     display: inline-block;
+     vertical-align: middle;
+     margin-left: 6px;
+     margin-top: 6px;
+}
+.sharethreadspan {
+     color: #A0A0A0;
+     padding-right: 10px;
+     font-weight: bold;
+}
+</style>
+<div class="sharethread">
+
+<span class="sharethreadspan">Share Thread:</span>
+    
+<a title="Facebook" href="http://www.facebook.com/share.php?u={$mybb->settings['bburl']}/showthread.php?tid={$thread['tid']}" target="_blank"><i class="fa fa-facebook" alt="Facebook"></i></a>
+
+<a title="Twitter" href="http://twitter.com/home?status={$thread['subject']} - {$mybb->settings['bburl']}/showthread.php?tid={$thread['tid']}" target="_blank"><i class="fa fa-twitter" alt="Twitter"></i></a>
+    
+<a href="https://plus.google.com/share?url={$mybb->settings['bburl']}/showthread.php?tid={$thread['tid']}&title={$thread['subject']}"  target="_blank">
+    <i class="fab fa-google-plus-g" alt="Google+"></i>
+</a>    
+
+<a title="Digg" href="http://digg.com/submit?url={$mybb->settings['bburl']}/showthread.php?tid={$thread['tid']}" target="_blank"><i class="fa fa-digg" alt="Digg"></i></a>
+
+<a title="Delicious" href="http://del.icio.us/post?url={$mybb->settings['bburl']}/showthread.php?tid={$thread['tid']}&title={$thread['subject']}" target="_blank"><i class="fa fa-delicious" alt="Delicious"></i></a>
+
+<a title="Reddit" href="http://reddit.com/submit?url={$mybb->settings['bburl']}/showthread.php?tid={$thread['tid']}&title={$thread['subject']}" target="_blank"><i class="fa fa-reddit" alt="Reddit"></i></a>
+
+<a title="Mix" href="http://www.mix.com/mixit?su=submit?url={$mybb->settings['bburl']}/showthread.php?tid={$thread['tid']}" target="_blank"><i class="fa fa-mix" alt="Mix"></i></a>
+    
+<a title="Pinterest" href="http://pinterest.com/pin/create/button/?url={$mybb->settings['bburl']}/showthread.php?tid={$thread['tid']}&title={$thread['subject']}" target="_blank">
+    <i class="fa fa-pinterest" alt="Pinterest"></i>
+</a>   
+
+<a href="mailto:?subject={$thread['subject']}&amp;body=Check out this post {$mybb->settings['bburl']}/showthread.php?tid={$thread['tid']}&title={$thread['subject']}" title="Share by Email">
+  <i class="fa fa-envelope" alt="Email This!"></i>
+</a>
+
+<a href="javascript:window.print()">
+    <i class="fa fa-print" alt="Print Me!"></i>
+    </a>
+
+</div>]]></template>
+		<template name="usercp_nav_messenger" version="1818"><![CDATA[<tbody>
+<tr>
+	<td class="tcat tcat_menu tcat_collapse{$collapsedimg['usercppms']}">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/usercp/collapse{$collapsedimg['usercppms']}.png" id="usercppms_img" class="expander" alt="[-]"/></div>
+		<div><span class="smalltext"><strong>{$lang->ucp_nav_messenger}</strong></span></div>
+	</td>
+</tr>
+</tbody>
+<tbody style="{$collapsed['usercppms_e']}" id="usercppms_e">
+	{$ucp_nav_compose}
+	<tr>
+		<td class="trow1 smalltext">
+			{$folderlinks}
+		</td>
+	</tr>
+	{$ucp_nav_tracking}
+	<tr><td class="trow1 smalltext"><a href="private.php?action=folders" class="usercp_nav_item usercp_nav_pmfolders">{$lang->ucp_nav_edit_folders}</a></td></tr>
+</tbody>]]></template>
+		<template name="usercp_nav_misc" version="1818"><![CDATA[<tbody>
+<tr>
+	<td class="tcat tcat_menu tcat_collapse{$collapsedimg['usercpmisc']}">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/usercp/collapse{$collapsedimg['usercpmisc']}.png" id="usercpmisc_img" class="expander" alt="[-]" title="[-]" /></div>
+		<div><span class="smalltext"><strong>{$lang->ucp_nav_misc}</strong></span></div>
+	</td>
+</tr>
+</tbody>
+<tbody style="{$collapsed['usercpmisc_e']}" id="usercpmisc_e">
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=usergroups" class="usercp_nav_item usercp_nav_usergroups">{$lang->ucp_nav_usergroups}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=editlists" class="usercp_nav_item usercp_nav_editlists">{$lang->ucp_nav_editlists}</a></td></tr>
+	{$attachmentop}
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=drafts" class="usercp_nav_item usercp_nav_drafts">{$draftcount}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=subscriptions" class="usercp_nav_item usercp_nav_subscriptions">{$lang->ucp_nav_subscribed_threads}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=forumsubscriptions" class="usercp_nav_item usercp_nav_fsubscriptions">{$lang->ucp_nav_forum_subscriptions}</a></td></tr>
+	<tr><td class="trow1 smalltext"><a href="{$profile_link}" class="usercp_nav_item usercp_nav_viewprofile">{$lang->ucp_nav_view_profile}</a></td></tr>
+</tbody>]]></template>
+		<template name="usercp_nav_profile" version="1818"><![CDATA[<tbody>
+<tr>
+	<td class="tcat tcat_menu tcat_collapse{$collapsedimg['usercpprofile']}">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/usercp/collapse{$collapsedimg['usercpprofile']}.png" id="usercpprofile_img" class="expander" alt="[-]" title="[-]" /></div>
+		<div><span class="smalltext"><strong>{$lang->ucp_nav_profile}</strong></span></div>
+	</td>
+</tr>
+</tbody>
+<tbody style="{$collapsed['usercpprofile_e']}" id="usercpprofile_e">
+	<tr><td class="trow1 smalltext">
+		<div><a href="usercp.php?action=profile" class="usercp_nav_item usercp_nav_profile">{$lang->ucp_nav_edit_profile}</a></div>
+		{$changenameop}
+		<div><a href="usercp.php?action=password" class="usercp_nav_item usercp_nav_password">{$lang->ucp_nav_change_pass}</a></div>
+		<div><a href="usercp.php?action=email" class="usercp_nav_item usercp_nav_email">{$lang->ucp_nav_change_email}</a></div>
+		<div><a href="usercp.php?action=avatar" class="usercp_nav_item usercp_nav_avatar">{$lang->ucp_nav_change_avatar}</a></div>
+		{$changesigop}
+	</td></tr>
+	<tr><td class="trow1 smalltext"><a href="usercp.php?action=options" class="usercp_nav_item usercp_nav_options">{$lang->ucp_nav_edit_options}</a></td></tr>
+</tbody>]]></template>
+	</templates>
+</theme>
