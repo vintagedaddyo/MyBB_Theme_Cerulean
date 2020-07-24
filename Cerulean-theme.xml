@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Cerulean" version="1822">
+<theme name="Cerulean" version="1823">
 	<properties>
-		<templateset><![CDATA[7]]></templateset>
-		<editortheme><![CDATA[buttons-dark.css]]></editortheme>
+		<templateset><![CDATA[6]]></templateset>
+		<editortheme><![CDATA[Cerulean.css]]></editortheme>
 		<imgdir><![CDATA[themes/cerulean]]></imgdir>
 		<logo><![CDATA[themes/cerulean/logo.png]]></logo>
 		<tablespace><![CDATA[4]]></tablespace>
@@ -11,7 +11,7 @@
 		<disporder><![CDATA[a:11:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:14:"memberlist.css";i:3;s:10:"usercp.css";i:4;s:17:"thread_status.css";i:5;s:16:"star_ratings.css";i:6;s:14:"showthread.css";i:7;s:9:"modcp.css";i:8;s:14:"groupimage.css";i:9;s:14:"grouptitle.css";i:10;s:13:"grouppost.css";i:11;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1822"><![CDATA[/*
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: thread_status.css
@@ -370,9 +370,10 @@
 }
 
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1822"><![CDATA[/*
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: star_rating.css
@@ -491,9 +492,10 @@ margin:0 auto;
 
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1822"><![CDATA[/*
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: usercp.css
@@ -725,9 +727,10 @@ td[class^=trow]{
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1822"><![CDATA[/*
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: showthread.css
@@ -860,9 +863,10 @@ ul.thread_tools li.poll:after {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1822"><![CDATA[/*
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: modcp.css
@@ -961,9 +965,10 @@ ul.thread_tools li.poll:after {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="groupimage.css" version="1822"><![CDATA[/*
+		<stylesheet name="groupimage.css" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: groupimage.css
@@ -1250,9 +1255,10 @@ div.team_usergroup_16 icon {
     padding-right: 5px;
 }
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="memberlist.css" version="1822"><![CDATA[/*
+		<stylesheet name="memberlist.css" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: memberlist.css
@@ -1389,9 +1395,10 @@ h4 {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="grouptitle.css" version="1822"><![CDATA[/*
+		<stylesheet name="grouptitle.css" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: grouptitle.css
@@ -1455,9 +1462,10 @@ h4 {
 }
 
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="css3.css" version="1822"><![CDATA[/*
+		<stylesheet name="css3.css" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: css3.css
@@ -1613,9 +1621,10 @@ div.error {
 }
 
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="global.css" version="1822"><![CDATA[/*
+		<stylesheet name="global.css" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: global.css
@@ -2170,6 +2179,9 @@ table {
 }
 .post.unapproved_post {
 	background: #ffdde0;
+}
+.thread_start_datetime {
+	color: #999;
 }
 .post.unapproved_post .post_author {
 	border-bottom-color: #ffb8be;
@@ -3709,9 +3721,10 @@ div.jqi .jqisubstate .jqibuttons button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="grouppost.css" version="1822"><![CDATA[/*
+		<stylesheet name="grouppost.css" version="1823"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: grouppost.css
@@ -3795,23 +3808,22 @@ div.jqi .jqisubstate .jqibuttons button {
 /* define border gid 2 */
    border: 1px dashed #0072BF; 
 }
+		
 		]]>
 		</stylesheet>
 	</stylesheets>
 	<templates>
-		<template name="codebuttons" version="1822"><![CDATA[<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/sceditor/themes/{$theme['editortheme']}" type="text/css" media="all" />
+		<template name="codebuttons" version="1823"><![CDATA[<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/sceditor/themes/{$theme['editortheme']}" type="text/css" media="all" />
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/jquery.sceditor.bbcode.min.js?ver=1822"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/bbcodes_sceditor.js?ver=1822"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/bbcodes_sceditor.js?ver=1823"></script>
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/plugins/undo.js?ver=1821"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/icons/monocons.js?ver=1821"></script>
 <script type="text/javascript">
 var partialmode = {$mybb->settings['partialmode']},
 opt_editor = {
 	plugins: "undo",
 	format: "bbcode",
-    icons: "monocons",	
-	bbcodeTrim: true,
-	style: "{$mybb->asset_url}/jscripts/sceditor/styles/jquery.sceditor.{$theme['editortheme']}?ver=1821",
+	bbcodeTrim: false,
+	style: "{$mybb->asset_url}/jscripts/sceditor/styles/jquery.sceditor.{$theme['editortheme']}?ver=1823",
 	rtl: {$lang->settings['rtl']},
 	locale: "mybblang",
 	width: "100%",
@@ -3998,15 +4010,15 @@ $("#backtop").hide();
 				{$awaitingusers}
 				<navigation>
 				<br />]]></template>
-		<template name="headerinclude" version="1820"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+		<template name="headerinclude" version="1823"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <!-- Add Favicon -->
 <link rel="Shortcut icon" href="{$theme['imgdir']}/favicon.ico" />
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1820"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1820"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1823"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1821"></script>
 
 
 
@@ -4121,9 +4133,9 @@ select.each(function() {
 				<script type="text/javascript">
 					$("#quick_login input[name='url']").val($(location).attr('href'));
 				</script>]]></template>
-		<template name="header_welcomeblock_guest_login_modal" version="1819"><![CDATA[							<tr>
+		<template name="header_welcomeblock_guest_login_modal" version="1823"><![CDATA[							<tr>
 								<td class="login_form quick_username">
-                                  <i class="fa fa-user quick_username"></i><input value="" name="quick_username" type="text" placeholder="{$login_username}" id="quick_login_username" class="textbox">
+                                  <i class="fa fa-user quick_username"></i><input value="" name="quick_username" type="text" placeholder="{$login_username}" id="quick_login_username" class="textbox initial_focus">
                                 </td>
                               	<td class="login_form submit"  rowspan="2" vertical-align="middle">
 									<input name="submit" type="submit" class="login" value="{$lang->login}" />
@@ -4203,7 +4215,7 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 		<template name="index_logoutlink" version="1818"><![CDATA[<a href="member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}"><i class="fa fa-power-off tfoot-logout"></i>{$lang->index_logout}</a> |]]></template>
 		<template name="index_showteamlink" version="1818"><![CDATA[<a href="showteam.php"><i class="fa fa-group tfoot-team"></i>{$lang->forumteam}</a>]]></template>
 		<template name="index_statspage" version="1820"><![CDATA[ <a href="stats.php"><i class="fa fa-bar-chart tfoot-stats"></i>{$lang->forumstats}</a>]]></template>
-		<template name="memberlist" version="1821"><![CDATA[<html>
+		<template name="memberlist" version="1823"><![CDATA[<html>
 <head>
 <title>{$mybb->settings['bbname']} - {$lang->member_list}</title>
 {$headerinclude}
@@ -4266,7 +4278,7 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 </tr>
 <tr>
     <td class="trow1" width="33%" style="vertical-align: top;">
-        {$lang->contains}<br />
+        {$lang->exactly}<br />
         <input type="text" class="textbox" name="username" id="username" style="width: 99%; margin-top: 4px;" value="{$search_username}" />
     </td>
     <td class="trow1" width="33%" style="vertical-align: top;">
