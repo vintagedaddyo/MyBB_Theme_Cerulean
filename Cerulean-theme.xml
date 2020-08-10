@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Cerulean" version="1823">
+<theme name="Cerulean" version="1824">
 	<properties>
-		<templateset><![CDATA[6]]></templateset>
+		<templateset><![CDATA[5]]></templateset>
 		<editortheme><![CDATA[Cerulean.css]]></editortheme>
 		<imgdir><![CDATA[themes/cerulean]]></imgdir>
 		<logo><![CDATA[themes/cerulean/logo.png]]></logo>
@@ -11,7 +11,7 @@
 		<disporder><![CDATA[a:11:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:14:"memberlist.css";i:3;s:10:"usercp.css";i:4;s:17:"thread_status.css";i:5;s:16:"star_ratings.css";i:6;s:14:"showthread.css";i:7;s:9:"modcp.css";i:8;s:14:"groupimage.css";i:9;s:14:"grouptitle.css";i:10;s:13:"grouppost.css";i:11;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1823"><![CDATA[/*
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: thread_status.css
@@ -371,9 +371,10 @@
 
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1823"><![CDATA[/*
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: star_rating.css
@@ -493,9 +494,10 @@ margin:0 auto;
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1823"><![CDATA[/*
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: usercp.css
@@ -728,9 +730,10 @@ td[class^=trow]{
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1823"><![CDATA[/*
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: showthread.css
@@ -864,9 +867,10 @@ ul.thread_tools li.poll:after {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1823"><![CDATA[/*
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: modcp.css
@@ -966,9 +970,10 @@ ul.thread_tools li.poll:after {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="groupimage.css" version="1823"><![CDATA[/*
+		<stylesheet name="groupimage.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: groupimage.css
@@ -1256,9 +1261,10 @@ div.team_usergroup_16 icon {
 }
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="memberlist.css" version="1823"><![CDATA[/*
+		<stylesheet name="memberlist.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: memberlist.css
@@ -1396,9 +1402,10 @@ h4 {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="grouptitle.css" version="1823"><![CDATA[/*
+		<stylesheet name="grouptitle.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: grouptitle.css
@@ -1463,9 +1470,10 @@ h4 {
 
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="css3.css" version="1823"><![CDATA[/*
+		<stylesheet name="css3.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: css3.css
@@ -1622,9 +1630,10 @@ div.error {
 
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="global.css" version="1823"><![CDATA[/*
+		<stylesheet name="global.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: global.css
@@ -3722,9 +3731,10 @@ div.jqi .jqisubstate .jqibuttons button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="grouppost.css" version="1823"><![CDATA[/*
+		<stylesheet name="grouppost.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: grouppost.css
@@ -3809,13 +3819,14 @@ div.jqi .jqisubstate .jqibuttons button {
    border: 1px dashed #0072BF; 
 }
 		
+		
 		]]>
 		</stylesheet>
 	</stylesheets>
 	<templates>
-		<template name="codebuttons" version="1823"><![CDATA[<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/sceditor/themes/{$theme['editortheme']}" type="text/css" media="all" />
+		<template name="codebuttons" version="1824"><![CDATA[<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/sceditor/themes/{$theme['editortheme']}" type="text/css" media="all" />
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/jquery.sceditor.bbcode.min.js?ver=1822"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/bbcodes_sceditor.js?ver=1823"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/bbcodes_sceditor.js?ver=1824"></script>
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/plugins/undo.js?ver=1821"></script>
 <script type="text/javascript">
 var partialmode = {$mybb->settings['partialmode']},
