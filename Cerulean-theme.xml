@@ -5860,16 +5860,16 @@ if(use_xmlhttprequest == "1")
 </div>
 </div>]]></template>
 		<template name="postbit_away" version="1819"><![CDATA[<a href="{$post['profilelink_plain']}" title="{$lang->postbit_status_away}"><i class="fa fa-times-circle away" alt="{$lang->postbit_status_away}"></i></a>]]></template>
-		<template name="postbit_classic" version="1821"><![CDATA[{$ignore_bit}{$deleted_bit}
+		<template name="postbit_classic" version="1824"><![CDATA[{$ignore_bit}{$deleted_bit}
 <a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
-<div class="post classic {$unapproved_shade} gidpostbody gidpostbody_{$usergroup['gid']}" style="{$post_visibility}" id="post_{$post['pid']}">
-<div class="post_author scaleimages">
+<div class="post {$unapproved_shade} gidpostbody gidpostbody_{$usergroup['gid']}" style="{$post_visibility}" id="post_{$post['pid']}">
+<div class="post_author">
 	{$post['useravatar']}
 	<div class="author_information">
 			<strong><span class="largetext">{$post['profilelink']}</span></strong> {$post['onlinestatus']}<br />
 			<span class="smalltext">
 				<span class="grouptag grouptag_{$usergroup['gid']}">&nbsp; {$post['usertitle']}</span><br />
-				<span style="text-align: center;" class="userstar star_{$post['stars']}" title="{$post['usertitle']}"></span><br /> 
+				<span style="text-align: center;" class="userstar star_{$post['stars']}" title="{$post['usertitle']}"></span><br />
 				{$post['groupimage']}
 			</span>
 	</div>
@@ -5882,7 +5882,7 @@ if(use_xmlhttprequest == "1")
 		{$post['posturl']}
 		{$post['icon']}
 		<span class="post_date">{$post['postdate']} <span class="post_edit" id="edited_by_{$post['pid']}">{$post['editedmsg']}</span></span>
-	{$post['subject_extra']}
+		{$post['subject_extra']}
 	</div>
 	<div class="post_body scaleimages" id="pid_{$post['pid']}">
 		{$post['message']}
