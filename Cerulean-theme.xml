@@ -367,13 +367,7 @@
     z-index: 0;
     background-color: #333;
     border: #333 1px solid;
-}
-
-		
-		
-		
-		
-		]]>
+}	]]>
 		</stylesheet>
 		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -406,6 +400,7 @@
 
 .star_rating,
 .star_rating li a:hover,
+.star_rating li a:active,
 .star_rating .current_rating {
   vertical-align: middle;      
 }
@@ -496,14 +491,7 @@ li[style*="100"]~ li:nth-child(n+2) a  {
 td[id*="rating_table"] {
 text-align:center;
 margin:0 auto;
-}
-
-		
-		
-		
-		
-		
-		]]>
+}	]]>
 		</stylesheet>
 		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -733,14 +721,7 @@ td[class^=trow]{
 	top:11px; right:5px; 
 	color: #663096; 
 	font-size:16px;
-}		
-		
-		
-		
-		
-		
-		
-		]]>
+}			]]>
 		</stylesheet>
 		<stylesheet name="showthread.css" attachedto="showthread.php" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -870,15 +851,7 @@ ul.thread_tools li.poll:after {
 	text-align: center;
 	padding: 20px;
 	width: 100%;
-}		
-		
-		
-		
-		
-		
-		
-		
-		]]>
+}		]]>
 		</stylesheet>
 		<stylesheet name="modcp.css" attachedto="modcp.php" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -973,16 +946,7 @@ ul.thread_tools li.poll:after {
     margin: 0;
     width: 150px;
     padding: 0;
-}
-
-		
-		
-		
-		
-		
-		
-		
-		]]>
+}]]>
 		</stylesheet>
 		<stylesheet name="groupimage.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -1269,12 +1233,7 @@ div.team_usergroup_16 {
 div.team_usergroup_16 icon {
     color: #62c9a1;
     padding-right: 5px;
-}
-		
-		
-		
-		
-		]]>
+}	]]>
 		</stylesheet>
 		<stylesheet name="memberlist.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -1309,6 +1268,11 @@ div.team_usergroup_16 icon {
 	color: #FFF;
 }
 
+.memberlistprofile:active {
+	background: #303030;
+	color: #FFF;
+}
+
 .memberlistname {
     font-family: source-sans-pro, sans-serif;
 	font-size: 14px;
@@ -1328,6 +1292,10 @@ div.team_usergroup_16 icon {
 }
 
 .memberlistbio:hover {
+	color: #FFF;
+}
+
+.memberlistbio:active {
 	color: #FFF;
 }
 
@@ -1401,22 +1369,22 @@ h4 {
 	-webkit-border-radius: 50%;
 }
 
+.infothead-date:active {
+	padding: 6px;
+	background-color: #303030;
+	border: 1px solid #202020;
+	color: #ACACAC;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
  @media only screen and (max-width:728px) {
 .memberlistprofile {
 	float: left;
 	width: 100%;
 	text-align: center;
 }
-}
-
-		
-		
-		
-		
-		
-		
-		
-		]]>
+}]]>
 		</stylesheet>
 		<stylesheet name="grouptitle.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -1479,13 +1447,7 @@ h4 {
    background: #0072BF;
    border: 1px solid #0072BF;
    color: #ffffff;
-}
-
-		
-		
-		
-		
-		]]>
+}	]]>
 		</stylesheet>
 		<stylesheet name="css3.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -1647,13 +1609,7 @@ div.error {
 	-moz-border-radius: 3px;
     	-webkit-border-radius: 3px;
    	 border-radius: 3px;
-}
-
-		
-		
-		
-		
-		]]>
+}]]>
 		</stylesheet>
 		<stylesheet name="global.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -2353,7 +2309,15 @@ fieldset.trow1:hover {
     border: 1px solid #202020;
 	background: #303030;
 }
+fieldset.trow1:active {
+    border: 1px solid #202020;
+	background: #303030;
+}
 fieldset.trow2:hover {
+    border: 1px solid #202020;
+	background: #303030;
+}
+fieldset.trow2:active {
     border: 1px solid #202020;
 	background: #303030;
 }
@@ -2425,6 +2389,11 @@ button:hover, input.button:hover {
 	background: #252525;
 	color: #FFF;
 }
+button:active, input.button:active {
+	border-color: #353535;
+	background: #252525;
+	color: #FFF;
+}
 form {
 	margin: 0;
 	padding: 0;
@@ -2478,6 +2447,10 @@ form #message {
 	color: #a0a0a0;
 }
 .popup_menu .popup_item:hover {
+	background: #303030;
+	color: #a0a0a0;
+}
+.popup_menu .popup_item:active {
 	background: #303030;
 	color: #a0a0a0;
 }
@@ -2632,6 +2605,9 @@ blockquote cite span.highlight {
 .popup_menu a.popup_item:hover {
 	text-decoration: none;
 }
+.popup_menu a.popup_item:active {
+	text-decoration: none;
+}
 .subject_new {
 	font-weight: bold;
 }
@@ -2736,6 +2712,12 @@ div.error ul {
 	font-weight: bold;
 }
 .pagination a:hover {
+	background: #0072BC;
+	color: #fff;
+	border-color: #0072BC;
+	text-decoration: none;
+}
+.pagination a:active {
 	background: #0072BC;
 	color: #fff;
 	border-color: #0072BC;
@@ -2851,6 +2833,12 @@ div.error ul {
      border-radius: 0%;
      transition:all 0.3s ease;
 }
+
+.post .post_author div.author_avatar img:active {
+     border-radius: 0%;
+     transition:all 0.3s ease;
+}
+
 .post .post_author div.author_avatar {
 	float: left;
 	margin-right: 3px;
@@ -3766,15 +3754,7 @@ div.jqi .jqisubstate .jqibuttons button {
 	border-bottom: 1px solid #000;
 }
 
-/* END: Custom Scrollbar */	
-		
-		
-		
-		
-		
-		
-		
-		]]>
+/* END: Custom Scrollbar */		]]>
 		</stylesheet>
 		<stylesheet name="grouppost.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -3792,6 +3772,10 @@ div.jqi .jqisubstate .jqibuttons button {
 /** Post Hover **/
 
 .post_content:hover, .post_controls:hover, .post_author:hover {
+	background: #303030 !important;
+}
+
+.post_content:active, .post_controls:active, .post_author:active {
 	background: #303030 !important;
 }
 
@@ -3822,6 +3806,11 @@ div.jqi .jqisubstate .jqibuttons button {
    border: 1px dashed #008000;
 }
 
+.gidpostbody_4:active {
+/* define border gid 4 */
+   border: 1px dashed #008000;
+}
+
 .gidpostbody_6 {
 /* define border gid 6 */
    border: 1px solid #CC00CC;
@@ -3831,6 +3820,11 @@ div.jqi .jqisubstate .jqibuttons button {
 }
 
 .gidpostbody_6:hover {
+/* define border gid 6 */
+   border: 1px dashed #CC00CC;
+}
+
+.gidpostbody_6:active {
 /* define border gid 6 */
    border: 1px dashed #CC00CC;
 }
@@ -3848,6 +3842,11 @@ div.jqi .jqisubstate .jqibuttons button {
    border: 1px dashed #CC00CC;
 }
 
+.gidpostbody_3:active {
+/* define border gid 3 */
+   border: 1px dashed #CC00CC;
+}
+
 .gidpostbody_2 {
 /* define border gid 2 */
 	border: 1px solid #0072BF;
@@ -3861,9 +3860,10 @@ div.jqi .jqisubstate .jqibuttons button {
    border: 1px dashed #0072BF; 
 }
 		
-		
-		
-		]]>
+.gidpostbody_2:active {
+/* define border gid 2 */
+   border: 1px dashed #0072BF; 
+}				]]>
 		</stylesheet>
 		<stylesheet name="extras.css" version="1824"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
