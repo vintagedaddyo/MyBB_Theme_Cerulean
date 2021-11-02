@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Cerulean" version="1824">
+<theme name="Cerulean 1.2" version="1829">
 	<properties>
-		<templateset><![CDATA[5]]></templateset>
+		<templateset><![CDATA[9]]></templateset>
 		<editortheme><![CDATA[Cerulean.css]]></editortheme>
 		<imgdir><![CDATA[themes/cerulean]]></imgdir>
 		<logo><![CDATA[themes/cerulean/logo.png]]></logo>
@@ -11,7 +11,7 @@
 		<disporder><![CDATA[a:11:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:14:"memberlist.css";i:3;s:10:"usercp.css";i:4;s:17:"thread_status.css";i:5;s:16:"star_ratings.css";i:6;s:14:"showthread.css";i:7;s:9:"modcp.css";i:8;s:14:"groupimage.css";i:9;s:14:"grouptitle.css";i:10;s:13:"grouppost.css";i:11;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1824"><![CDATA[/*
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: thread_status.css
@@ -372,9 +372,10 @@
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1824"><![CDATA[/*
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: star_rating.css
@@ -495,9 +496,10 @@ margin:0 auto;
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1824"><![CDATA[/*
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: usercp.css
@@ -731,9 +733,10 @@ td[class^=trow]{
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1824"><![CDATA[/*
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: showthread.css
@@ -868,9 +871,10 @@ ul.thread_tools li.poll:after {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1824"><![CDATA[/*
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: modcp.css
@@ -971,9 +975,10 @@ ul.thread_tools li.poll:after {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="groupimage.css" version="1824"><![CDATA[/*
+		<stylesheet name="groupimage.css" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: groupimage.css
@@ -1262,9 +1267,10 @@ div.team_usergroup_16 icon {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="memberlist.css" version="1824"><![CDATA[/*
+		<stylesheet name="memberlist.css" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: memberlist.css
@@ -1403,9 +1409,10 @@ h4 {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="grouptitle.css" version="1824"><![CDATA[/*
+		<stylesheet name="grouptitle.css" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: grouptitle.css
@@ -1471,9 +1478,10 @@ h4 {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="css3.css" version="1824"><![CDATA[/*
+		<stylesheet name="css3.css" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: css3.css
@@ -1631,9 +1639,10 @@ div.error {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="global.css" version="1824"><![CDATA[/*
+		<stylesheet name="global.css" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: global.css
@@ -1728,6 +1737,38 @@ fieldset#search {
 }
 .select2-drop-active {
     border: 1px solid #202020 !important;	
+}
+
+/** FA4 collapse **/
+
+/* thead */
+
+ .thead .expander:before {
+     font-size:16px;
+     font-weight:900;
+     content: "\f106";
+     display:inline-block;
+     font-family: 'FontAwesome';
+     transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
+}
+
+ .thead.thead_collapsed .expander:before {
+     transform: rotate(-180deg);
+}
+
+/* tcat */
+
+ .tcat .expander:before {
+     font-size:16px;
+     font-weight:900;
+     content: "\f106";
+     display:inline-block;
+     font-family: 'FontAwesome';
+     transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
+}
+ 
+ .tcat.tcat_menu.tcat_collapse_collapsed .expander:before {
+     transform: rotate(-180deg);
 }
 
 /** Current Dev End **/
@@ -3237,6 +3278,12 @@ i.sendto {
 	font-size: 16px;
 }
 
+/** attach count **/
+
+.pclip {
+	color: #a0a0a0;
+}
+
 /** Usergroup star rating - FontAwesome **/
 
 .userstar {
@@ -3732,9 +3779,10 @@ div.jqi .jqisubstate .jqibuttons button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="grouppost.css" version="1824"><![CDATA[/*
+		<stylesheet name="grouppost.css" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: grouppost.css
@@ -3820,13 +3868,14 @@ div.jqi .jqisubstate .jqibuttons button {
 }
 		
 		
+		
 		]]>
 		</stylesheet>
 	</stylesheets>
 	<templates>
-		<template name="codebuttons" version="1824"><![CDATA[<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/sceditor/themes/{$theme['editortheme']}" type="text/css" media="all" />
+		<template name="codebuttons" version="1829"><![CDATA[<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/sceditor/themes/{$theme['editortheme']}" type="text/css" media="all" />
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/jquery.sceditor.bbcode.min.js?ver=1822"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/bbcodes_sceditor.js?ver=1824"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/bbcodes_sceditor.js?ver=1827"></script>
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/plugins/undo.js?ver=1821"></script>
 <script type="text/javascript">
 var partialmode = {$mybb->settings['partialmode']},
@@ -3866,7 +3915,7 @@ $(function() {
 	{$sourcemode}
 });
 </script>]]></template>
-		<template name="footer" version="1820"><![CDATA[<!-- Back to Top -->
+		<template name="footer" version="1829"><![CDATA[<!-- Back to Top -->
 <script type="text/javascript">
 $(function($) {
 $("#backtop").hide();
@@ -3920,7 +3969,7 @@ $("#backtop").hide();
 								<br />
 				<!-- Begin Theme Credits -->
 				
-				Theme &copy; by: <a href="http://community.mybb.com/user-6029.html" target="_blank">Vintagedaddyo</a>
+				Theme &copy; by: <a href="https://github.com/vintagedaddyo/MyBB_Theme_Cerulean/tree/master/Documentation/v1.2" target="_blank">Vintagedaddyo</a>
 				
                 <!-- End Theme Credits -->
 				
@@ -3951,6 +4000,26 @@ $("#backtop").hide();
 	{$theme_options}
 </form>
 </div>]]></template>
+		<template name="forumbit_depth1_cat" version="1829"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<thead>
+<tr>
+<td class="thead{$expthead}" colspan="5">
+<div class="expcolimage"><div src="{$theme['imgdir']}/" id="cat_{$forum['fid']}_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div></div>
+<div><strong><a href="{$forum_url}">{$forum['name']}</a></strong><br /><div class="smalltext">{$forum['description']}</div></div>
+</td>
+</tr>
+</thead>
+<tbody style="{$expdisplay}" id="cat_{$forum['fid']}_e">
+<tr>
+<td class="tcat" colspan="2"><span class="smalltext"><strong>{$lang->forumbit_forum}</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>{$lang->forumbit_threads}</strong></span></td>
+<td class="tcat" width="85" align="center" style="white-space: nowrap"><span class="smalltext"><strong>{$lang->forumbit_posts}</strong></span></td>
+<td class="tcat" width="200" align="center"><span class="smalltext"><strong>{$lang->forumbit_lastpost}</strong></span></td>
+</tr>
+{$sub_forums}
+</tbody>
+</table>
+<br />]]></template>
 		<template name="forumbit_depth2_cat" version="1807"><![CDATA[<tr>
 <td class="{$bgcolor}" align="center" width="1"><div class="forum_status forum_{$lightbulb['folder']} ajax_mark_read ficons_{$forum['fid']}" title="{$lightbulb['altonoff']}" id="mark_read_{$forum['fid']}"><i class="fa fa-comments"></i></div></td>
 <td class="{$bgcolor}">
@@ -3970,6 +4039,9 @@ $("#backtop").hide();
 <td class="{$bgcolor}" align="right" style="white-space: nowrap">{$lastpost}</td>
 </tr>]]></template>
 		<template name="forumbit_depth3_statusicon" version="1807"><![CDATA[<div title="{$lightbulb['altonoff']}" class="subforumicon subforum_{$lightbulb['folder']} ajax_mark_read" id="mark_read_{$forum['fid']}"><i class="fa fa-comment"></i></div>]]></template>
+		<template name="forumdisplay_thread_attachment_count" version="1829"><![CDATA[<div class="float_right" style="margin:10px;">
+<i class="fa fa-paperclip pclip" title="{$attachment_count}"></i>
+</div>]]></template>
 		<template name="forumdisplay_thread_rating" version="1815"><![CDATA[<td align="center" class="{$bgcolor}{$thread_type_class}" id="rating_table_{$thread['tid']}">
         
 <ul class="star_rating{$not_rated}" id="rating_thread_{$thread['tid']}">
@@ -4021,7 +4093,7 @@ $("#backtop").hide();
 				{$awaitingusers}
 				<navigation>
 				<br />]]></template>
-		<template name="headerinclude" version="1823"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+		<template name="headerinclude" version="1829"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -4029,12 +4101,9 @@ $("#backtop").hide();
 <link rel="Shortcut icon" href="{$theme['imgdir']}/favicon.ico" />
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1823"></script>
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1821"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1821"></script>
-
-
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1827"></script>
 
 {$stylesheets}
-
 
 <!-- FontAwesome -->
 
@@ -4076,7 +4145,9 @@ select.each(function() {
 <script type="text/javascript">
 <!--
 	lang.unknown_error = "{$lang->unknown_error}";
-
+	lang.confirm_title = "{$lang->confirm_title}";
+	lang.expcol_collapse = "{$lang->expcol_collapse}";
+	lang.expcol_expand = "{$lang->expcol_expand}";
 	lang.select2_match = "{$lang->select2_match}";
 	lang.select2_matches = "{$lang->select2_matches}";
 	lang.select2_nomatches = "{$lang->select2_nomatches}";
@@ -4163,6 +4234,25 @@ select.each(function() {
 									<label for="quick_login_remember">{$lang->remember_me}</label>
 								</td>
 							</tr>]]></template>
+		<template name="header_welcomeblock_member" version="1829"><![CDATA[<!-- Continuation of div(class="upper") as opened in the header template -->
+	<span class="welcome">{$lang->welcome_back} <a href="{$mybb->settings['bburl']}/member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}" class="logout"><i class="fa fa-sign-in panel-logout"></i>{$lang->welcome_logout}</a></span>
+	</div>
+</div>
+<div class="lower">
+	<div class="wrapper">
+		<ul class="menu panel_links">
+			{$usercplink}
+			{$modcplink}
+			{$admincplink}
+		</ul>
+		<ul class="menu user_links">
+			{$buddylink}
+			{$searchlink}
+			{$pmslink}
+		</ul>
+	</div>
+	<br class="clear" />
+</div>]]></template>
 		<template name="header_welcomeblock_member_admin" version="1807"><![CDATA[<li><a href="{$mybb->settings['bburl']}/{$admin_dir}/index.php" class="admincp"><i class="fa fa-cog panel-admincp"></i>{$lang->welcome_admin}</a></li>]]></template>
 		<template name="header_welcomeblock_member_moderator" version="1807"><![CDATA[<li><a href="{$mybb->settings['bburl']}/modcp.php" class="modcp"><i class="fa fa-file-text panel-modcp"></i>{$lang->welcome_modcp}</a></li>]]></template>
 		<template name="header_welcomeblock_member_user" version="1821"><![CDATA[<li><a href="{$mybb->settings['bburl']}/usercp.php" class="usercp"><i class="fa fa-user panel-usercp"></i>{$lang->welcome_usercp}</a></li>]]></template>
@@ -4199,11 +4289,11 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 {$footer}
 </body>
 </html>]]></template>
-		<template name="index_boardstats" version="1820"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+		<template name="index_boardstats" version="1829"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
 <thead>
 <tr>
 <td class="thead{$collapsedthead['boardstats']}">
-<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['boardstats']}.png" id="boardstats_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div>
+<div class="expcolimage"><div src="{$theme['imgdir']}/" id="boardstats_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div></div>
 <div><strong>{$lang->boardstats}</strong></div>
 </td>
 </tr>
@@ -4465,15 +4555,29 @@ if(use_xmlhttprequest == "1")
 </body>
 </html>]]></template>
 		<template name="member_profile_groupimage" version="1819"><![CDATA[<div class="team_usergroup_{$memprofile['usergroup']}" alt="{$usertitle}" title="{$usertitle}">{$memperms['image']}</div><br />]]></template>
+		<template name="misc_help_section" version="1829"><![CDATA[<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder clear">
+<thead>
+<tr>
+<td class="thead{$expthead}"><div class="expcolimage"><div src="{$theme['imgdir']}/" id="sid_{$section['sid']}_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div></div><div><strong>{$section['name']}</strong></div></td>
+</tr>
+</thead>
+<tbody style="{$expdisplay}" id="sid_{$section['sid']}_e">
+<tr>
+<td class="tcat"><span class="smalltext"><strong>{$section['description']}</strong></span></td>
+</tr>
+{$helpbits}
+</tbody>
+</table>
+<br />]]></template>
 		<template name="misc_syndication_forumlist" version="1819"><![CDATA[<!--<select name="forums[]" size="10" multiple="multiple">-->
 <select name="forums[]">
 <option value="all" {$addsel}>{$lang->syndicate_all_forums}</option>
 <option value="all">----------------------</option>
 {$forumlistbits}
 </select>]]></template>
-		<template name="modcp_nav_forums_posts" version="1818"><![CDATA[	<tr>
+		<template name="modcp_nav_forums_posts" version="1829"><![CDATA[	<tr>
 		<td class="tcat tcat_menu tcat_collapse{$collapsedimg['modcpforums']}">
-			<div class="expcolimage"><img src="{$theme['imgdir']}/modcp/collapse{$collapsedimg['modcpforums']}.png" id="modcpforums_img" class="expander" alt="[-]" title="[-]" /></div>
+			<div class="expcolimage"><div src="{$theme['imgdir']}/" id="modcpforums_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div></div>
 			<div><span class="smalltext"><strong>{$lang->mcp_nav_forums}</strong></span></div>
 		</td>
 	</tr>
@@ -4483,9 +4587,9 @@ if(use_xmlhttprequest == "1")
 		{$nav_reportcenter}
 		{$nav_modlogs}
 	</tbody>]]></template>
-		<template name="modcp_nav_users" version="1818"><![CDATA[	<tr>
+		<template name="modcp_nav_users" version="1829"><![CDATA[	<tr>
 		<td class="tcat tcat_menu tcat_collapse{$collapsedimg['modcpusers']}">
-			<div class="expcolimage"><img src="{$theme['imgdir']}/modcp/collapse{$collapsedimg['modcpusers']}.png" id="modcpusers_img" class="expander" alt="[-]" title="[-]" /></div>
+			<div class="expcolimage"><div src="{$theme['imgdir']}/" id="modcpusers_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div></div>
 			<div><span class="smalltext"><strong>{$lang->mcp_nav_users}</strong></span></div>
 		</td>
 	</tr>
@@ -4635,13 +4739,13 @@ if(use_xmlhttprequest == "1")
 		<template name="postbit_groupimage" version="1819"><![CDATA[<div class="team_usergroup_{$usergroup['gid']}" title="{$usergroup['title']}">{$usergroup['image']}</div>]]></template>
 		<template name="postbit_offline" version="1819"><![CDATA[<i class="fa fa-times-circle offline" title="{$lang->postbit_status_offline}" alt="{$lang->postbit_status_offline}"></i>]]></template>
 		<template name="postbit_online" version="1819"><![CDATA[<a href="online.php" title="{$lang->postbit_status_online}"><i class="fa fa-check-circle online" alt="{$lang->postbit_status_online}"></i></a>]]></template>
-		<template name="private_messagebit" version="1815"><![CDATA[<tr>
-	<td align="center" class="trow1" width="1%"><span class="x_{$msgstatus}" title="{$msgalt}"></span></td>
-	<td align="center" class="trow2" width="1%">{$icon}</td>
-	<td class="trow1" width="35%"><a class="{$msgstatus}" href="private.php?action=read&amp;pmid={$message['pmid']}">{$message['subject']}</a>{$denyreceipt}</td>
-	<td align="center" class="trow2">{$tofromusername}</td>
-	<td class="trow1" align="right" style="white-space: nowrap"><span class="smalltext">{$senddate}</span></td>
-	<td class="trow2" align="center"><input type="checkbox" class="checkbox" name="check[{$message['pmid']}]" value="1" /></td>
+		<template name="private_messagebit" version="1829"><![CDATA[<tr>
+	<td class="{$bgcolor}" align="center" width="2%"><span class="x_{$msgstatus}" alt="{$msgalt}" title="{$msgalt}"></span></td>
+	<td class="{$bgcolor}" align="center" width="2%">{$icon}</td>
+	<td class="{$bgcolor}" width="35%"><a class="{$msgstatus}" href="private.php?action=read&amp;pmid={$message['pmid']}">{$message['subject']}</a>{$denyreceipt}</td>
+	<td class="{$bgcolor}" align="center">{$tofromusername}</td>
+	<td class="{$bgcolor}" align="right" style="white-space: nowrap"><span class="smalltext">{$senddate}</span></td>
+	<td class="{$bgcolor}" align="center" width="2%"><input type="checkbox" class="checkbox" name="check[{$message['pmid']}]" value="1" /></td>
 </tr>]]></template>
 		<template name="private_search_messagebit" version="1815"><![CDATA[<tr>
 	<td align="center" class="trow1" width="1%"><span class="x_{$msgstatus}" title="{$msgalt}"></span></td>
@@ -4800,10 +4904,10 @@ if(use_xmlhttprequest == "1")
     </a>
 
 </div>]]></template>
-		<template name="usercp_nav_messenger" version="1818"><![CDATA[<tbody>
+		<template name="usercp_nav_messenger" version="1829"><![CDATA[<tbody>
 <tr>
 	<td class="tcat tcat_menu tcat_collapse{$collapsedimg['usercppms']}">
-		<div class="expcolimage"><img src="{$theme['imgdir']}/usercp/collapse{$collapsedimg['usercppms']}.png" id="usercppms_img" class="expander" alt="[-]"/></div>
+		<div class="expcolimage"><div src="{$theme['imgdir']}/" id="usercppms_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div></div>
 		<div><span class="smalltext"><strong>{$lang->ucp_nav_messenger}</strong></span></div>
 	</td>
 </tr>
@@ -4818,10 +4922,10 @@ if(use_xmlhttprequest == "1")
 	{$ucp_nav_tracking}
 	<tr><td class="trow1 smalltext"><a href="private.php?action=folders" class="usercp_nav_item usercp_nav_pmfolders">{$lang->ucp_nav_edit_folders}</a></td></tr>
 </tbody>]]></template>
-		<template name="usercp_nav_misc" version="1818"><![CDATA[<tbody>
+		<template name="usercp_nav_misc" version="1829"><![CDATA[<tbody>
 <tr>
 	<td class="tcat tcat_menu tcat_collapse{$collapsedimg['usercpmisc']}">
-		<div class="expcolimage"><img src="{$theme['imgdir']}/usercp/collapse{$collapsedimg['usercpmisc']}.png" id="usercpmisc_img" class="expander" alt="[-]" title="[-]" /></div>
+		<div class="expcolimage"><div src="{$theme['imgdir']}/" id="usercpmisc_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div></div>
 		<div><span class="smalltext"><strong>{$lang->ucp_nav_misc}</strong></span></div>
 	</td>
 </tr>
@@ -4835,10 +4939,10 @@ if(use_xmlhttprequest == "1")
 	<tr><td class="trow1 smalltext"><a href="usercp.php?action=forumsubscriptions" class="usercp_nav_item usercp_nav_fsubscriptions">{$lang->ucp_nav_forum_subscriptions}</a></td></tr>
 	<tr><td class="trow1 smalltext"><a href="{$profile_link}" class="usercp_nav_item usercp_nav_viewprofile">{$lang->ucp_nav_view_profile}</a></td></tr>
 </tbody>]]></template>
-		<template name="usercp_nav_profile" version="1818"><![CDATA[<tbody>
+		<template name="usercp_nav_profile" version="1829"><![CDATA[<tbody>
 <tr>
 	<td class="tcat tcat_menu tcat_collapse{$collapsedimg['usercpprofile']}">
-		<div class="expcolimage"><img src="{$theme['imgdir']}/usercp/collapse{$collapsedimg['usercpprofile']}.png" id="usercpprofile_img" class="expander" alt="[-]" title="[-]" /></div>
+		<div class="expcolimage"><div src="{$theme['imgdir']}/" id="usercpprofile_img" class="expander" alt="{$expaltext}" title="{$expaltext}" /></div></div>
 		<div><span class="smalltext"><strong>{$lang->ucp_nav_profile}</strong></span></div>
 	</td>
 </tr>
