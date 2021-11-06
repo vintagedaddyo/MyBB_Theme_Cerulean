@@ -4345,10 +4345,261 @@ select {
 }
 
 /* end */
-		]]>
+
+/* start */
+
+/* basic calendar responsiveness */
+
+@media (max-width:768px) {
+
+.weekday_day_name strong {
+    display: none;
+}
+
+.calendar .tcat[width*="1"] {
+    padding: 1px;
+}
+	
+/* translations */
+
+/* English */
+
+[title="Sunday"]:after {
+    content: 'Sun';
+}
+
+[title="Monday"]:after {
+    content: 'Mon';
+}
+
+[title="Tuesday"]:after {
+    content: 'Tue';
+}
+
+[title="Wednesday"]:after {
+    content: 'Wed';
+}
+
+[title="Thursday"]:after {
+    content: 'Thu';
+}
+
+[title="Friday"]:after {
+    content: 'Fri';
+}
+
+[title="Saturday"]:after {
+    content: 'Sat';
+}
+
+/* French */
+
+[title="Dimanche"]:after {
+    content: 'Dim';
+}
+
+[title="Lundi"]:after {
+    content: 'Lun';
+}
+
+[title="Mardi"]:after {
+    content: 'Mar';
+}
+
+[title="Mercredi"]:after {
+    content: 'Mer';
+}
+
+[title="Jeudi"]:after {
+    content: 'Jeu';
+}
+
+[title="Vendredi"]:after {
+    content: 'Ven';
+}
+
+[title="Samedi"]:after {
+    content: 'Sam';
+}
+
+/* Spanish */
+
+[title="Domingo"]:after {
+    content: 'Dom';
+}
+
+[title="Lunes"]:after {
+    content: 'Lun';
+}
+
+[title="Martes"]:after {
+    content: 'Mar';
+}
+
+[title="Miércoles"]:after {
+    content: 'Mié';
+}
+
+[title="Jueves"]:after {
+    content: 'Jue';
+}
+
+[title="Viernes"]:after {
+    content: 'Vie';
+}
+
+[title="Sábado"]:after {
+    content: 'Sáb';
+}
+
+/* Italian */
+
+[title="Domenica"]:after {
+    content: 'Dom';
+}
+
+[title="Lunedì"]:after {
+    content: 'Lun';
+}
+
+[title="Martedì"]:after {
+    content: 'Mar';
+}
+
+[title="Mercoledì"]:after {
+    content: 'Merc';
+}
+
+[title="Giovedì"]:after {
+    content: 'Gio';
+}
+
+[title="Venerdì"]:after {
+    content: 'Ven';
+}
+
+[title="Sabato"]:after {
+    content: 'Sab';
+}
+
+/* add your additional langs here */
+
+.weekday_day_height {
+    height: 0px;
+}
+}
+
+@media (min-width:768px) {
+.weekday_day_height {
+    height: 100px;  
+}
+}
+
+@media (max-width:800px)  {
+.weekday_day_height {
+    height: 60px;  
+}
+}
+
+@media (max-width:600px)  {
+.weekday_day_height {
+    height: 50px;  
+}
+}
+
+@media (max-width:480px) {
+.weekday_day_height {
+    height: 40px;  
+}
+}
+
+@media (max-width:320px) {
+.weekday_day_height {
+    height: 30px;  
+}
+}
+/* end */]]>
 		</stylesheet>
 	</stylesheets>
 	<templates>
+		<template name="calendar" version="1829"><![CDATA[<html>
+<head>
+	<title>{$mybb->settings['bbname']} - {$lang->calendar}</title>
+	{$headerinclude}
+</head>
+<style>	
+table td {
+     display: revert !important;	
+}
+.tcat {
+	display: revert !important;
+	}
+</style>
+<body>
+	{$header}
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+		<thead>
+			<tr>
+				<td class="thead" colspan="8">
+					<div class="float_right">
+						{$prev_month_link}{$sep}{$next_month_link}
+					</div>
+					<div><strong>{$monthnames[$month]} {$year}</strong></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="tcat">&nbsp;</td>
+			{$weekday_headers}
+			</tr>
+		</thead>
+		<tbody>
+		{$calendar_rows}
+		</tbody>
+	</table>
+<br />
+<form action="calendar.php" method="post">
+	<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+		<tr>
+			<td class="trow1">
+				<table width="100%" cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td valign="top">{$addevent}</td>
+						<td align="right">
+						<span class="smalltext"><strong>{$lang->jump_month}</strong></span>
+						<select name="month">
+							<option value="{$month}">{$monthnames[$month]}</option>
+							<option value="{$month}">----------</option>
+							<option value="1">{$lang->alt_month_1}</option>
+							<option value="2">{$lang->alt_month_2}</option>
+							<option value="3">{$lang->alt_month_3}</option>
+							<option value="4">{$lang->alt_month_4}</option>
+							<option value="5">{$lang->alt_month_5}</option>
+							<option value="6">{$lang->alt_month_6}</option>
+							<option value="7">{$lang->alt_month_7}</option>
+							<option value="8">{$lang->alt_month_8}</option>
+							<option value="9">{$lang->alt_month_9}</option>
+							<option value="10">{$lang->alt_month_10}</option>
+							<option value="11">{$lang->alt_month_11}</option>
+							<option value="12">{$lang->alt_month_12}</option>
+						</select>
+						<select name="year">
+							<option value="{$year}">{$year}</option>
+							<option value="{$year}">----------</option>
+							{$yearsel}
+						</select>
+						{$gobutton}
+						<br />
+						{$calendar_jump}
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</form>
+{$footer}
+</body>
+</html>]]></template>
 		<template name="calendar_addevent" version="1824"><![CDATA[<html>
 <head>
 <title>{$mybb->settings['bbname']} - {$lang->calendar} - {$lang->add_event}</title>
@@ -4725,8 +4976,11 @@ select {
 {$footer}
 </body>
 </html>]]></template>
-		<template name="calendar_weekrow_day" version="1824"><![CDATA[			
-				    <td class="trow1" style="vertical-align: top;">
+		<template name="calendar_weekdayheader" version="1829"><![CDATA[				<!--<td class="tcat" align="center" width="14%"><strong>{$weekday_name}</strong></td>-->
+<td class="tcat weekday_day_name" align="center" width="14%" title="{$weekday_name}"><strong>{$weekday_name}</strong></td>]]></template>
+		<template name="calendar_weekrow_day" version="1829"><![CDATA[
+			<!-- <td class="trow1" style="vertical-align: top; height: 100px;"> -->
+                    <td class="{$day_class} trow1 weekday_day_height" style="vertical-align: top;">
 					<div class="float_right smalltext"><a href="{$day_link}">{$day}</a></div>
 					<div class="clear">
 					{$day_birthdays}
@@ -5272,7 +5526,7 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 <tr>
 <td class="trow1"><span class="smalltext">{$lang->online_note}<br />{$onlinemembers}</span></td>
 </tr>]]></template>
-		<template name="memberlist" version="1823"><![CDATA[<html>
+		<template name="memberlist" version="1829"><![CDATA[<html>
 <head>
 <title>{$mybb->settings['bbname']} - {$lang->member_list}</title>
 {$headerinclude}
@@ -5367,48 +5621,48 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 <!--
 if(use_xmlhttprequest == "1")
 {
-    MyBB.select2();
-    $("#username").select2({
-        placeholder: "{$lang->search_user}",
-        minimumInputLength: 2,
-        multiple: false,
-        allowClear: true,
-        ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
-            url: "xmlhttp.php?action=get_users",
-            dataType: 'json',
-            data: function (term, page) {
-                return {
-                    query: term, // search term
-                };
-            },
-            results: function (data, page) { // parse the results into the format expected by Select2.
-                // since we are using custom formatting functions we do not need to alter remote JSON data
-                return {results: data};
-            }
-        },
-        initSelection: function(element, callback) {
-            var value = $(element).val();
-            if (value !== "") {
-                callback({
-                    id: value,
-                    text: value
-                });
-            }
-        },
+	MyBB.select2();
+	$("#username").select2({
+		placeholder: "{$lang->search_user}",
+		minimumInputLength: 2,
+		multiple: false,
+		allowClear: true,
+		ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
+			url: "xmlhttp.php?action=get_users",
+			dataType: 'json',
+			data: function (term, page) {
+				return {
+					query: term, // search term
+				};
+			},
+			results: function (data, page) { // parse the results into the format expected by Select2.
+				// since we are using custom formatting functions we do not need to alter remote JSON data
+				return {results: data};
+			}
+		},
+		initSelection: function(element, callback) {
+			var value = $(element).val();
+			if (value !== "") {
+				callback({
+					id: value,
+					text: value
+				});
+			}
+		},
        // Allow the user entered text to be selected as well
        createSearchChoice:function(term, data) {
-            if ( $(data).filter( function() {
-                return this.text.localeCompare(term)===0;
-            }).length===0) {
-                return {id:term, text:term};
-            }
-        },
-    });
+			if ( $(data).filter( function() {
+				return this.text.localeCompare(term)===0;
+			}).length===0) {
+				return {id:term, text:term};
+			}
+		},
+	});
 
-    $('[for=username]').on('click', function(){
-        $("#username").select2('open');
-        return false;
-    });
+  	$('[for=username]').on('click', function(){
+		$("#username").select2('open');
+		return false;
+	});
 }
 // -->
 </script>
