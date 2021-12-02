@@ -6917,6 +6917,34 @@ img { max-width: 100%; height: auto; }
 <td class="{$trow}" align="center"><span class="ucp_show smalltext"><strong>{$lang->draft_options}:</strong></span> <a href="{$editurl}">{$lang->edit_draft}</a></td>
 <td class="{$trow}" align="center"><input type="checkbox" class="checkbox" name="deletedraft[{$id}]" value="{$type}" /></td>
 </tr>]]></template>
+		<template name="usercp_editlists_received_request" version="1829"><![CDATA[<tr>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->from}:</strong></span>
+		{$request['username']}
+	</td>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->date}:</strong></span>
+		{$request['date']}
+	</td>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->options}:</strong></span>
+		<a href="{$mybb->settings['bburl']}/usercp.php?action=acceptrequest&amp;id={$request['id']}&amp;my_post_key={$mybb->post_code}">{$lang->accept}</a> - <a href="{$mybb->settings['bburl']}/usercp.php?action=declinerequest&amp;id={$request['id']}&amp;my_post_key={$mybb->post_code}">{$lang->decline}</a>
+	</td>
+</tr>]]></template>
+		<template name="usercp_editlists_sent_request" version="1829"><![CDATA[<tr>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->to}:</strong></span>
+		{$request['username']}
+	</td>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->date}:</strong></span>
+		{$request['date']}
+	</td>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->options}:</strong></span>
+		<a href="{$mybb->settings['bburl']}/usercp.php?action=cancelrequest&amp;id={$request['id']}&amp;my_post_key={$mybb->post_code}">{$lang->cancel}</a>
+	</td>
+</tr>]]></template>
 		<template name="usercp_email" version="1824"><![CDATA[<html>
 <head>
 <title>{$mybb->settings['bbname']} - {$lang->change_email}</title>
@@ -7154,6 +7182,11 @@ img { max-width: 100%; height: auto; }
 		<a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}</span>
 	</td>
 	<td class="{$bgcolor}" align="center"><input type="checkbox" class="checkbox" name="check[{$thread['tid']}]" value="{$thread['tid']}" /></td>
+</tr>]]></template>
+		<template name="usercp_usergroups_memberof_usergroup" version="1829"><![CDATA[<tr>
+<td class="{$trow}"><span class="smalltext ucp_show"><strong>{$lang->usergroups_usergroup}:</strong></span> <strong> {$usergroup['title']}</strong> {$displaycode}{$description}</td>
+<td class="{$trow}" align="center"><span class="smalltext ucp_show"><strong>{$lang->usertitle}:</strong></span> {$usergroup['usertitle']}</td>
+<td class="{$trow}"><span class="smalltext ucp_show"><strong>{$lang->usergroup_leave}:</strong></span> {$leavelink}</td>
 </tr>]]></template>
 		<template name="warnings_view" version="1824"><![CDATA[<html>
 <head>
