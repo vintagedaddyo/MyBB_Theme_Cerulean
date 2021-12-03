@@ -951,7 +951,23 @@ ul.thread_tools li.poll:after {
     width: 150px;
     padding: 0;
 }
-		]]>
+
+/** Modcp Announcement active/expired **/
+
+.mcp_announceicon {
+	height: 16px; 
+	width: 16px; 
+	display: inline-block;  
+	vertical-align: middle; 
+}
+
+.mcp_announceicon_on {
+    background-image: url('themes/cerulean/modcp/announcement/announce_on.png'); 
+}
+
+.mcp_announceicon_off {
+	background-image: url('themes/cerulean/modcp/announcement/announce_off.png'); 
+}		]]>
 		</stylesheet>
 		<stylesheet name="groupimage.css" version="1829"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
@@ -5796,6 +5812,8 @@ if(use_xmlhttprequest == "1")
 <option value="all">----------------------</option>
 {$forumlistbits}
 </select>]]></template>
+		<template name="modcp_announcements_announcement_active" version="1829"><![CDATA[<div class="mcp_announceicon mcp_announceicon_on" title="{$lang->active_announcement}"></div>]]></template>
+		<template name="modcp_announcements_announcement_expired" version="1829"><![CDATA[<div class="mcp_announceicon mcp_announceicon_off" title="{$lang->expired_announcement}"></div>]]></template>
 		<template name="modcp_awaitingattachments" version="1824"><![CDATA[<tr>
 <td class="{$bgcolor}"><span class="mcp_show">{$lang->type}</span> <span class="smalltext"><strong>{$lang->attachments}</strong></span></td>
 <td class="{$bgcolor}" align="center"><span class="mcp_show">{$lang->number_awaiting}</span> <span class="smalltext">{$unapproved_attachments}</span></td>
