@@ -3215,6 +3215,7 @@ input.login {
 	margin-right: 5px;
 	transition: all 0.8s ease;
 }
+input.login:active,
 input.login:hover {
 	background: #007FC6;
 	border: 5px solid #252525;
@@ -4107,6 +4108,12 @@ form#ignored {
 /* UserCP & ModCP nav tcat display */
 	
 .cpshow {
+     display: block !important; 
+}
+	
+/* Search Results check tcat display */
+	
+.srcshow {
      display: block !important; 
 }
 	
@@ -5419,13 +5426,11 @@ select.each(function() {
 				<script type="text/javascript">
 					$("#quick_login input[name='url']").val($(location).attr('href'));
 				</script>]]></template>
-		<template name="header_welcomeblock_guest_login_modal" version="1824"><![CDATA[							<tr>
+		<template name="header_welcomeblock_guest_login_modal" version="1829"><![CDATA[							<tr>
 								<td class="login_form quick_username">
                                   <i class="fa fa-user quick_username"></i><input value="" name="quick_username" type="text" placeholder="{$login_username}" id="quick_login_username" class="textbox initial_focus">
                                 </td>
-                              	<!--<td class="login_form submit"  rowspan="2" vertical-align="middle">
-									<input name="submit" type="submit" class="login" value="{$lang->login}" />
-								</td>-->  						
+                             </tr>						
 							<tr>
                             	<td class="login_form quick_password">
                                   <i class="fa fa-key quick_password"></i><input value="" name="quick_password" type="password" placeholder="{$lang->password}" id="quick_login_password" class="textbox">
@@ -5438,7 +5443,6 @@ select.each(function() {
 									<label for="quick_login_remember">{$lang->remember_me}</label>
 								</td>
 							</tr>
-
                            <tr>
                              <td class="login_form submit"  rowspan="2" vertical-align="middle">
 							   <input name="submit" type="submit" class="login" value="{$lang->login}" />
@@ -6435,117 +6439,41 @@ img { max-width: 100%; height: auto; }
 <option value="all">----------------------</option>
 {$forumlistbits}
 </select>]]></template>
-		<template name="search_results_inlinemodcol" version="1824"><![CDATA[<td class="tcat ucpcheck_show" align="center" width="1"><input type="checkbox" name="allbox" onclick="inlineModeration.checkAll(this);" /></td>]]></template>
-		<template name="search_results_posts" version="1824"><![CDATA[<html>
-<head>
-<title>{$mybb->settings['bbname']} - {$lang->search_results}</title>
-{$headerinclude}
-</head>
-<body>
-{$header}
-<table width="100%" align="center" border="0">
-	<tr>
-		<td align="right" valign="top">{$multipage}</td>
-	</tr>
-</table>
-<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
-	<tr>
-		<td colspan="9" class="thead">
-			<strong>{$lang->search_results}</strong>
-		</td>
-	</tr>
-	<tr>
-		<td class="tcat" align="center" colspan="3"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=subject&amp;order=asc">{$lang->post}</a> {$orderarrow['subject']}</strong></span></td>
-		<td class="tcat" align="center"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=starter&amp;order=asc">{$lang->author}</a> {$orderarrow['starter']}</strong></span></td>
-		<td class="tcat" align="center"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=forum&amp;order=asc">{$lang->forum}</a> {$orderarrow['forum']}</strong></span></td>
-		<td class="tcat" align="center"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=replies&amp;order=desc">{$lang->replies}</a> {$orderarrow['replies']}</strong></span></td>
-		<td class="tcat" align="center"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=views&amp;order=desc">{$lang->views}</a></strong> {$orderarrow['views']}</span></td>
-		<td class="tcat ucpcheck_show" align="center"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=dateline&amp;order=desc">{$lang->posted}</a> {$orderarrow['dateline']}</strong></span></td>
-		{$inlinemodcol}
-	</tr>
-	{$selectall}
-	{$results}
-</table>
-<table width="100%" align="center" border="0">
-	<tr>
-		<td align="left" valign="top">{$multipage}</td>
-		<td align="right" valign="top">{$inlinemod}</td>
-	</tr>
-</table>
-{$footer}
-</body>
-</html>]]></template>
-		<template name="search_results_posts_post" version="1824"><![CDATA[<tr class="inline_row">
-	<td align="center" class="{$bgcolor}" width="2%"><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="folder_show">{$folder_label}</span></td>
-	<td align="center" class="{$bgcolor}" width="2%"><span class="thread_show">{$lang->post_icon}</span> {$icon}</td>
+		<template name="search_results_inlinemodcol" version="1829"><![CDATA[<td class="tcat srcshow" align="center" width="1"><input type="checkbox" name="allbox" onclick="inlineModeration.checkAll(this);" /></td>]]></template>
+		<template name="search_results_posts_post" version="1829"><![CDATA[<tr class="inline_row">
+	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong></span><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="folder_show"> {$folder_label}</span></td>
+	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->post_icon}</strong></span> {$icon}</td>
 	<td class="{$bgcolor}">
+		<span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=subject&amp;order=asc">{$lang->post}:</a> {$orderarrow['subject']}</strong></span><br />
 		<span class="smalltext">
 			{$lang->post_thread} <a href="{$thread_url}{$highlight}">{$post['thread_subject']}</a><br />
 			{$lang->post_subject} <a href="{$post_url}{$highlight}#pid{$post['pid']}">{$post['subject']}</a>
 		</span><br />
 		<table width="100%"><tr><td><span class="smalltext"><em>{$prev}</em></span></td></tr></table>
 	</td>
-	<td align="center" class="{$bgcolor}"><span class="thread_show">{$lang->author}</span> {$post['profilelink']}</td>
-	<td class="{$bgcolor}" ><span class="thread_show">{$lang->forum}</span> {$post['forumlink']}</td>
-	<td align="center" class="{$bgcolor}"><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$post['tid']}" onclick="MyBB.whoPosted({$post['tid']}); return false;">{$post['thread_replies']}</a> <span class="thread_show">{$lang->replies}</span></td>
-	<td align="center" class="{$bgcolor}">{$post['thread_views']} <span class="thread_show">{$lang->views}</span></td>
-	<td class="{$bgcolor}" style="white-space: nowrap; text-align: center;"><span class="thread_show">{$lang->posted}</span> <span class="smalltext">{$posted}</span></td>
+	<td align="center" class="{$bgcolor}"><span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=starter&amp;order=asc">{$lang->author}:</a> {$orderarrow['starter']}</strong></span> {$post['profilelink']}</td>
+	<td class="{$bgcolor}" ><span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=forum&amp;order=asc">{$lang->forum}:</a> {$orderarrow['forum']}</strong></span> {$post['forumlink']}</td>
+	<td align="center" class="{$bgcolor}"><span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=replies&amp;order=desc">{$lang->replies}:</a> {$orderarrow['replies']}</strong></span><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$post['tid']}" onclick="MyBB.whoPosted({$post['tid']}); return false;">{$post['thread_replies']}</a></td>
+	<td align="center" class="{$bgcolor}"><span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=views&amp;order=desc">{$lang->views}:</a></strong> {$orderarrow['views']}</span>{$post['thread_views']}</td>
+	<td class="{$bgcolor}" style="white-space: nowrap; text-align: center;"><span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=dateline&amp;order=desc">{$lang->posted}:</a> {$orderarrow['dateline']}</strong></span><span class="smalltext">{$posted}</span></td>
 	{$inline_mod_checkbox}
 </tr>]]></template>
-		<template name="search_results_threads" version="1824"><![CDATA[<html>
-		<head>
-		<title>{$mybb->settings['bbname']} - {$lang->search_results}</title>
-		{$headerinclude}
-		</head>
-		<body>
-		{$header}
-		<table width="100%" align="center" border="0">
-			<tr>
-				<td align="right" valign="top">{$multipage}</td>
-			</tr>
-		</table>
-		<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
-			<tr>
-				<td colspan="8" class="thead">
-					<strong>{$lang->search_results}</strong>
-				</td>
-			</tr>
-			<tr>
-				<td class="tcat" align="center" colspan="3" width="56%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=subject&amp;order=asc">{$lang->thread}</a> {$orderarrow['subject']}</strong> / <strong><a href="{$sorturl}&amp;sortby=starter&amp;order=asc">{$lang->author}</a> {$orderarrow['starter']}</strong></span></td>
-				<td class="tcat" align="center" width="14%"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=forum&amp;order=asc">{$lang->forum}</a> {$orderarrow['forum']}</strong></span></td>
-				<td class="tcat" align="center"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=replies&amp;order=desc">{$lang->replies}</a> {$orderarrow['replies']}</strong></span></td>
-				<td class="tcat" align="center"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=views&amp;order=desc">{$lang->views}</a> {$orderarrow['views']}</strong></span></td>
-				<td class="tcat ucpcheck_show" align="center" width="200"><span class="smalltext"><strong><a href="{$sorturl}&amp;sortby=lastpost&amp;order=desc">{$lang->lastpost}</a> {$orderarrow['lastpost']}</strong></span></td>
-				{$inlinemodcol}
-			</tr>
-			{$selectall}
-			{$results}
-		</table>
-		{$inline_edit_js}
-		<table width="100%" align="center" border="0">
-			<tr>
-				<td align="left" valign="top">{$multipage}</td>
-				<td align="right" valign="top">{$inlinemod}</td>
-			</tr>
-		</table>
-		{$footer}
-		</body>
-		</html>]]></template>
-		<template name="search_results_threads_thread" version="1824"><![CDATA[<tr class="inline_row">
-	<td align="center" class="{$bgcolor}" width="2%"><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="folder_show">{$folder_label}</span></td>
-	<td align="center" class="{$bgcolor}" width="2%"><span class="thread_show">{$lang->post_icon}</span> {$icon}</td>
+		<template name="search_results_threads_thread" version="1829"><![CDATA[<tr class="inline_row">
+	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong></span><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="folder_show"> {$folder_label}</span></td>
+	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->post_icon}</strong></span> {$icon}</td>
 	<td class="{$bgcolor}">
 		{$attachment_count}
 		<div>
-			<span class="thread_show">{$lang->thread}</span> <span>{$prefix} {$gotounread}{$thread['threadprefix']}<a href="{$thread_link}{$highlight}" class="{$inline_edit_class} {$new_class}" id="tid_{$inline_edit_tid}">{$thread['subject']}</a>{$thread['multipage']}</span>
-			<div class="author smalltext"><span class="thread_show">{$lang->author}</span> {$thread['profilelink']}</div>
+			<span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=subject&amp;order=asc">{$lang->thread}:</a> {$orderarrow['subject']}</strong></span><span>{$prefix} {$gotounread}{$thread['threadprefix']}<a href="{$thread_link}{$highlight}" class="{$inline_edit_class} {$new_class}" id="tid_{$inline_edit_tid}">{$thread['subject']}</a>{$thread['multipage']}</span>
+			<div class="author smalltext"><span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=starter&amp;order=asc">{$lang->author}:</a> {$orderarrow['starter']}</strong></span>{$thread['profilelink']}</div>
 		</div>
 	</td>
-	<td class="{$bgcolor}"><span class="thread_show">{$lang->forum}</span> {$thread['forumlink']}</td>
-	<td align="center" class="{$bgcolor}"><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$thread['tid']}" onclick="MyBB.whoPosted({$thread['tid']}); return false;">{$thread['replies']}</a> <span class="thread_show">{$lang->replies}</span></td>
-	<td align="center" class="{$bgcolor}">{$thread['views']} <span class="thread_show">{$lang->views}</span></td>
+	<td class="{$bgcolor}"><span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=forum&amp;order=asc">{$lang->forum}:</a> {$orderarrow['forum']}</strong></span> {$thread['forumlink']}</td>
+	<td align="center" class="{$bgcolor}"><span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=replies&amp;order=desc">{$lang->replies}:</a> {$orderarrow['replies']}</strong></span><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$thread['tid']}" onclick="MyBB.whoPosted({$thread['tid']}); return false;"> {$thread['replies']}</a></td>
+	<td align="center" class="{$bgcolor}"><span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=views&amp;order=desc">{$lang->views}:</a> {$orderarrow['views']}</strong></span> {$thread['views']}</td>
 	<td class="{$bgcolor}" style="white-space: nowrap">
-		<span class="thread_show">{$lang->lastpost}</span> <span class="smalltext">
+		<span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=lastpost&amp;order=desc">{$lang->lastpost}:</a> {$orderarrow['lastpost']}</strong></span>
+		<span class="smalltext">
 			{$lastpostdate}<br />
 			<a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}
 		</span>
