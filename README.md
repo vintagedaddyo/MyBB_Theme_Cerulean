@@ -26,6 +26,7 @@ Cerulean v1.3
 
 History:
 
+03/16/2022 — Updated "Cerulean-theme.xml" file to 1.8.30
 11/1/2021 — Updated "Cerulean-theme.xml" file to 1.8.29
 02/08/2021 — Updated "Cerulean-theme.xml" file to Cerulean v1.3
 08/10/2020 — Updated "Cerulean-theme.xml" file to 1.8.24
