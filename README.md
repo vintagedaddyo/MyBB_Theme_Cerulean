@@ -3,7 +3,9 @@
 Cerulean v1.3
 » About:
 
-This is a simple dark theme for MyBB enthusiasts styled similar to the ACP Style of the same name found here: https://github.com/vintagedaddyo/MyBB_ACP_Style_Cerulean (for both of the Cerise and Cerulean ACP styles are included in such)
+This is a simple dark theme for MyBB enthusiasts styled similar to the ACP Style of the same name.
+
+That ACP Style can be found here: https://github.com/vintagedaddyo/MyBB_ACP_Style_Cerulean (for both of the Cerise and Cerulean ACP styles are included in such)
 
 Theme uses Font-Awesome version: 4.7.0
 
