@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Cerulean" version="1839">
+<theme name="Cerulean" version="1830">
 	<properties>
-		<templateset><![CDATA[32]]></templateset>
+		<templateset><![CDATA[10]]></templateset>
 		<editortheme><![CDATA[Cerulean.css]]></editortheme>
 		<imgdir><![CDATA[themes/cerulean]]></imgdir>
 		<logo><![CDATA[themes/cerulean/logo.png]]></logo>
@@ -11,7 +11,7 @@
 		<disporder><![CDATA[a:12:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:14:"memberlist.css";i:3;s:10:"usercp.css";i:4;s:17:"thread_status.css";i:5;s:16:"star_ratings.css";i:6;s:14:"showthread.css";i:7;s:9:"modcp.css";i:8;s:14:"groupimage.css";i:9;s:14:"grouptitle.css";i:10;s:13:"grouppost.css";i:11;s:10:"extras.css";i:12;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1839"><![CDATA[/*
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: thread_status.css
@@ -369,10 +369,9 @@
     border: #333 1px solid;
 }	
 		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1839"><![CDATA[/*
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: star_rating.css
@@ -496,10 +495,9 @@ text-align:center;
 margin:0 auto;
 }	
 		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1839"><![CDATA[/*
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: usercp.css
@@ -729,10 +727,9 @@ td[class^=trow]{
 	font-size:16px;
 }			
 		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1839"><![CDATA[/*
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: showthread.css
@@ -862,10 +859,9 @@ ul.thread_tools li.poll:after {
 	width: 100%;
 }		
 		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1839"><![CDATA[/*
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: modcp.css
@@ -976,10 +972,9 @@ ul.thread_tools li.poll:after {
 .mcp_announceicon_off {
 	background-image: url('themes/cerulean/modcp/announcement/announce_off.png'); 
 }		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="groupimage.css" version="1839"><![CDATA[/*
+		<stylesheet name="groupimage.css" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: groupimage.css
@@ -1266,10 +1261,9 @@ div.team_usergroup_16 icon {
     padding-right: 5px;
 }	
 		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="memberlist.css" version="1839"><![CDATA[/*
+		<stylesheet name="memberlist.css" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: memberlist.css
@@ -1413,17 +1407,16 @@ h4 {
 	-webkit-border-radius: 50%;
 }
  @media only screen and (max-width:728px) {
-	.memberlistprofile {
-		float: left;
-		width: 98.5%;
-		text-align: center;
-	}
+.memberlistprofile {
+	float: left;
+	width: 100%;
+	text-align: center;
 }
-	
+}
 		
 		]]>
 		</stylesheet>
-		<stylesheet name="grouptitle.css" version="1839"><![CDATA[/*
+		<stylesheet name="grouptitle.css" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: grouptitle.css
@@ -1486,10 +1479,9 @@ h4 {
    color: #ffffff;
 }	
 		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="css3.css" version="1839"><![CDATA[/*
+		<stylesheet name="css3.css" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: css3.css
@@ -1662,10 +1654,9 @@ div.error {
    	 border-radius: 3px;
 }
 		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="global.css" version="1839"><![CDATA[/*
+		<stylesheet name="global.css" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: global.css
@@ -3849,10 +3840,9 @@ div.jqi .jqisubstate .jqibuttons button {
 
 /* END: Custom Scrollbar */		
 		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="grouppost.css" version="1839"><![CDATA[/*
+		<stylesheet name="grouppost.css" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: grouppost.css
@@ -3961,10 +3951,9 @@ div.jqi .jqisubstate .jqibuttons button {
    border: 1px dashed #0072BF; 
 }				
 		
-		
 		]]>
 		</stylesheet>
-		<stylesheet name="extras.css" version="1839"><![CDATA[/*
+		<stylesheet name="extras.css" version="1830"><![CDATA[/*
  * MyBB: Cerulean Frontend Theme 
  *
  * File: extras.css
@@ -4570,16 +4559,7 @@ select {
 }
 }
 /* end */
-		
-/* Tweak for Poll */
-@media (max-width: 868px) {
-	table {
-		table-layout: auto !important;
-	}
-	colgroup > col {
-		width: 100% !important;
-	}
-}		]]>
+		]]>
 		</stylesheet>
 	</stylesheets>
 	<templates>
