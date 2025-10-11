@@ -28,26 +28,28 @@ Cerulean v1.3
 
 History:
 
-10/11/2025 — Updated "Cerulean-theme.xml" file to 1.8.39
-03/16/2022 — Updated "Cerulean-theme.xml" file to 1.8.30
-11/1/2021 — Updated "Cerulean-theme.xml" file to 1.8.29
-02/08/2021 — Updated "Cerulean-theme.xml" file to Cerulean v1.3
-08/10/2020 — Updated "Cerulean-theme.xml" file to 1.8.24
-07/24/2020 — Updated "Cerulean-theme.xml" file to 1.8.23
-06/27/2019 — Updated "Cerulean-theme.xml" file to 1.8.21
-04/05/2019 — Updated "Cerulean-theme.xml" file to 1.8.20
-09/11/2018 — Updated "Cerulean-theme.xml" file to 1.8.19
-08/30/2018 — Updated "Cerulean-theme.xml" file to 1.8.18
-03/28/2018 — Updated "Cerulean-theme.xml" file to 1.8.15
-04/21/2016 — Initial Theme Creation
+- 10/11/2025 — Updated "Cerulean-theme.xml" file to 1.8.39
+- 03/16/2022 — Updated "Cerulean-theme.xml" file to 1.8.30
+- 11/1/2021 — Updated "Cerulean-theme.xml" file to 1.8.29
+- 02/08/2021 — Updated "Cerulean-theme.xml" file to Cerulean v1.3
+- 08/10/2020 — Updated "Cerulean-theme.xml" file to 1.8.24
+- 07/24/2020 — Updated "Cerulean-theme.xml" file to 1.8.23
+- 06/27/2019 — Updated "Cerulean-theme.xml" file to 1.8.21
+- 04/05/2019 — Updated "Cerulean-theme.xml" file to 1.8.20
+- 09/11/2018 — Updated "Cerulean-theme.xml" file to 1.8.19
+- 08/30/2018 — Updated "Cerulean-theme.xml" file to 1.8.18
+- 03/28/2018 — Updated "Cerulean-theme.xml" file to 1.8.15
+- 04/21/2016 — Initial Theme Creation
 
 
 Read changelog:
 https://community.mybb.com/mods.php?acti...og&pid=735
 
 To Do:
+
 * fix any minor styling issues
 * complete postbit icon sections of thread status that I haven't fully completed yet
+* maybe update Font Awesome 4 to newer Font Awesome version if or when I feel like it
 
 
 Due to the addition of css groupimage replacement, we need to after install modify for font awesome icon and add in groups in groupimage input for example for each usergroup its respective group name:
