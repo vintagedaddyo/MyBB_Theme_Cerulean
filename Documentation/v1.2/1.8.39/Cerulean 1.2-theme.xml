@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme name="Cerulean 1.2" version="1839">
 	<properties>
-		<templateset><![CDATA[35]]></templateset>
+		<templateset><![CDATA[20]]></templateset>
 		<editortheme><![CDATA[Cerulean.css]]></editortheme>
 		<imgdir><![CDATA[themes/cerulean]]></imgdir>
 		<logo><![CDATA[themes/cerulean/logo.png]]></logo>
@@ -375,6 +375,7 @@
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1839"><![CDATA[/*
@@ -494,6 +495,7 @@ text-align:center;
 margin:0 auto;
 }
 
+		
 		
 		
 		
@@ -740,6 +742,7 @@ td[class^=trow]{
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 		<stylesheet name="showthread.css" attachedto="showthread.php" version="1839"><![CDATA[/*
@@ -880,6 +883,7 @@ ul.thread_tools li.poll:after {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 		<stylesheet name="modcp.css" attachedto="modcp.php" version="1839"><![CDATA[/*
@@ -977,6 +981,7 @@ ul.thread_tools li.poll:after {
     padding: 0;
 }
 
+		
 		
 		
 		
@@ -1280,6 +1285,7 @@ div.team_usergroup_16 icon {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 		<stylesheet name="memberlist.css" version="1839"><![CDATA[/*
@@ -1424,6 +1430,7 @@ h4 {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 		<stylesheet name="grouptitle.css" version="1839"><![CDATA[/*
@@ -1489,6 +1496,7 @@ h4 {
    color: #ffffff;
 }
 
+		
 		
 		
 		
@@ -1652,6 +1660,7 @@ div.error {
    	 border-radius: 3px;
 }
 
+		
 		
 		
 		
@@ -3800,6 +3809,7 @@ div.jqi .jqisubstate .jqibuttons button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 		<stylesheet name="grouppost.css" version="1839"><![CDATA[/*
@@ -3891,21 +3901,22 @@ div.jqi .jqisubstate .jqibuttons button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 	</stylesheets>
 	<templates>
-		<template name="codebuttons" version="1829"><![CDATA[<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/sceditor/themes/{$theme['editortheme']}" type="text/css" media="all" />
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/jquery.sceditor.bbcode.min.js?ver=1822"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/bbcodes_sceditor.js?ver=1827"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/plugins/undo.js?ver=1821"></script>
+		<template name="codebuttons" version="1839"><![CDATA[<link rel="stylesheet" href="{$mybb->asset_url}/jscripts/sceditor/themes/{$theme['editortheme']}" type="text/css" media="all" />
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/jquery.sceditor.bbcode.min.js?ver=1832"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/bbcodes_sceditor.js?ver=1837"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/sceditor/plugins/undo.js?ver=1832"></script>
 <script type="text/javascript">
 var partialmode = {$mybb->settings['partialmode']},
 opt_editor = {
 	plugins: "undo",
 	format: "bbcode",
 	bbcodeTrim: false,
-	style: "{$mybb->asset_url}/jscripts/sceditor/styles/jquery.sceditor.{$theme['editortheme']}?ver=1823",
+	style: "{$mybb->asset_url}/jscripts/sceditor/styles/jquery.sceditor.{$theme['editortheme']}?ver=1832",
 	rtl: {$lang->settings['rtl']},
 	locale: "mybblang",
 	width: "100%",
@@ -4336,7 +4347,6 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 </table>
 <br />]]></template>
 		<template name="index_logoutlink" version="1818"><![CDATA[<a href="member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}"><i class="fa fa-power-off tfoot-logout"></i>{$lang->index_logout}</a> |]]></template>
-		<template name="index_showteamlink" version="1818"><![CDATA[<a href="showteam.php"><i class="fa fa-group tfoot-team"></i>{$lang->forumteam}</a>]]></template>
 		<template name="index_statspage" version="1820"><![CDATA[ <a href="stats.php"><i class="fa fa-bar-chart tfoot-stats"></i>{$lang->forumstats}</a>]]></template>
 		<template name="memberlist" version="1823"><![CDATA[<html>
 <head>
